@@ -1,0 +1,28 @@
+.container{
+    padding: 20px 20px;
+}
+
+#register{
+  width: 60px;
+}
+#signin{
+  width: 60px;
+}
+
+#test_info{
+    padding-bottom: 20px;
+}
+
+#promote-btn{
+    width: 300px;
+    position: relative;
+    left: 37%;/*整個分頁向右邊移動寬度的50%*/
+    text-align: center;
+}
+
+h1.thin {
+    color: #333333;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+}
