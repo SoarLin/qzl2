@@ -14,7 +14,8 @@
 
     <!-- Bootstrap CSS & Font Awesome-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
     <!-- SmartAdmin Style -->
     <link rel="stylesheet" href="css/LESS_FILES/smartadmin-production.css">
     <!-- <link rel="stylesheet" href="css/smartadmin-skins.css"> -->
@@ -42,229 +43,373 @@
         </div>
         <div class="navbar-collapse collapse">
           <div class="navbar-right navbar-login">
-            <button type="button" class="btn btn-info">登入</button>
-            <button type="button" class="btn btn-info">註冊</button>
+            <button type="button" class="btn btn-info" id="login-btn">登入</button>
+            <button type="button" class="btn btn-info" id="register-btn">註冊</button>
           </div>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="loginLabel">Sign in</h4>
+          </div>
+          <div class="modal-body">
+              <div class="row" id="loginAccount">
+                <div class="col-xs-12 col-sm-6" align="center">
+                  <button type="button" class="btn btn-labeled btn-primary">
+                   <span class="btn-label"><i class="fa fa-facebook fa-2x"></i></span>
+                   <span style="font-size:18px;">Login with facebook</span>
+                  </button>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="passwd" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn btn-default">Sign in</button>
+                  <a class="pull-right" href="">忘記密碼</a>
+                </div>
+              </div>
+              <div class="row" id="createAccount" style="display:none;">
+                <div class="widget-body fuelux">
+        
+                    <div class="wizard">
+                      <ul class="steps">
+                        <li data-target="#step1" class="active">
+                          <span class="badge badge-info">1</span>Step 1<span class="chevron"></span>
+                        </li>
+                        <li data-target="#step2">
+                          <span class="badge">2</span>Step 2<span class="chevron"></span>
+                        </li>
+                        <li data-target="#step3">
+                          <span class="badge">3</span>Step 3<span class="chevron"></span>
+                        </li>
+                      </ul>
+                      <div class="actions">
+                        <button type="button" class="btn btn-sm btn-primary btn-prev" disabled="disabled">
+                          <i class="fa fa-arrow-left"></i>Prev
+                        </button>
+                        <button type="button" class="btn btn-sm btn-success btn-next" data-last="Finish">
+                          Next<i class="fa fa-arrow-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="step-content">
+                      <form class="form-horizontal" id="fuelux-wizard" method="post">
+                        <div class="step-pane active" id="step1">
+                          <h3><strong>Step 1 </strong> - Fill Account Information</h3>
+                          <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                              <label for="inputName" class="col-sm-3 control-label">UserName</label>
+                              <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputName" placeholder="UserName">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="inputEmail" class="col-sm-3 control-label">Email</label>
+                              <div class="col-sm-6">
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="inputPassword" class="col-sm-3 control-label">Password</label>
+                              <div class="col-sm-6">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label for="inputPasswordAgain" class="col-sm-3 control-label">Password Again</label>
+                              <div class="col-sm-6">
+                                <input type="password" class="form-control" id="inputPasswordAgain" placeholder="Password Again">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="col-sm-offset-3 col-sm-9">
+                                <div class="checkbox">
+                                  <label>
+                                    <input type="checkbox"> 我已閱讀且同意網站的 <a href="">隱私權條款</a>與<a href="">服務條款</a>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="col-sm-offset-3 col-sm-9">
+                                <button type="button" class="btn btn-default btn-next" data-last="Finish">Submit</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div class="step-pane" id="step2">
+                          <h3><strong>Step 2 </strong> - Input Validation Code</h3>
+                          <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                              <label for="inputCode" class="col-sm-3 control-label">Validation Code</label>
+                              <div class="col-sm-6">
+                                <input type="text" class="form-control" id="inputCode" placeholder="Validation Code">
+                              </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                  <button type="button" class="btn btn-default">Submit</button>
+                                </div>
+                              </div>
+                          </form>
+                        </div>
+        
+                        <div class="step-pane" id="step3">
+                          <h3><strong>Step 3 </strong> - Finished!</h3>
+                          <br>
+                          <br>
+                          <h1 class="text-center text-success"><i class="fa fa-check"></i> Congratulations!
+                          </h1>
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                        </div>
+        
+                      </form>
+                    </div>
+        
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer" id="loginFooter">
+            <a href="javascript:switchToCreateAccount();">Create New Account</a>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
     </header>
     <!-- END HEADER -->
 
-    <div id="test_info">
-      <div class="container">
-        <section id="widget-grid">
-          <div class="row">
-            <article class="col-sm-12">
-              <div class="jarviswidget jarviswidget-color-blueLight" id="wid-id-5" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false">
-                <header>
-                  <span class="widget-icon"> <i class="fa fa-info"></i> </span>
-                    <h2>考情資訊</h2>
-                    <ul id="widget-tab-1" class="nav nav-tabs pull-right">
-                      <li class="active"><a data-toggle="tab" href="#s1">最新指考訊息
-                        <span class="badge bg-color-red txt-color-white">3</span></a></li>
-                      <li><a data-toggle="tab" href="#s2">相關指考新聞</a></li>
-                    </ul>
-                </header>
-                <div>
-                  <div class="jarviswidget-editbox">
-                  </div>
-                  <div class="widget-body no-padding">
-                    <div class="tab-content padding-10">
-                      <div class="tab-pane fade in active" id="s1">
-                        <h4>大學指考 下月1日起報名&nbsp;&nbsp;<small class="text-right">2014/04/09</small></h4>
-                        <p>【聯合報╱記者陳智華／台北報導】</p>
-                        <p>大學指考7月1日登場，大考中心昨天指出，5月1日起報名，今年報名費沒調漲，如集體報名考5科，報名費為1050元，中低收入戶有7折優待，低收入費免費。指考簡章已發售，可上網下載（http://www.ceec.edu.tw），報名到5月16日，6月3日寄發准考證，6月17日公佈試場分配表及考試地點查詢。...
-                          <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=507654" target="_blank">詳全文</a></p>
-                        <hr />
-                        <h4>指考簡章 4月1日起發售&nbsp;&nbsp;<small class="text-right">2014/03/28</small></h4>
-                        <p>【聯合報╱記者陳智華／台北報導】</p>
-                        <p>大考中心昨天指出，103年指考簡章4月1日起發售，到5月16日，今年考試入學分發招生校系，採計3到6科，發售方式可到大考中心網站查詢，網址為http://www.ceec.edu.tw/。
-                          <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=505758" target="_blank">詳全文</a></p>
-                        <hr />
-                        <h4>103學年度 指定科目考試重要日期&nbsp;&nbsp;<small class="text-right">2014/03/25</small></h4>
-                        <p>【聯合報╱記者陳智華／台北報導】</p>
-                        <p>【聯合新聞網／整理】項目 日期 報名  103／05／01 (四) 〜05／16(五...
-                          <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=505537" target="_blank">詳全文</a></p>
-                      </div>
-
-                      <div class="tab-pane fade" id="s2">
-                        <h4>分科測驗取代指考 申請延到6、7月&nbsp;&nbsp;<small class="text-right">2014/03/15</small></h4>
-                        <p>【聯合報╱記者陳智華／台北報導】</p>
-                        <p>大考中心原本規畫110年指考與學測兩試合一，成為「新型學測」，但昨天公佈最新草案，又改成兩試不合一，學測成為「新型學測」，指考則轉型為「分科測驗」，「新型學測」仍在寒假考試，「分科測驗」5月考，個人申請則延到6、7月才進行，但可同時採用學測和分科測驗成績。...
-                          <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=503858" target="_blank">詳全文</a></p>
-                        <hr />
-                        <h4>「新型學測」廢指考 擬6月定案&nbsp;&nbsp;<small class="text-right">2014/02/12</small></h4>
-                        <p>【聯合報╱記者張錦弘／台北報導】</p>
-                        <p>大考中心昨天開會討論大學招考改革案，初步取得共識，未來指考將走入歷史，改推出「新型學測」，考國、英、數、自然、社會等5科，可同時用於繁星推薦、個人申請及分發。繁星招生一律採計5科，另2管道採計3到5科。...
-                          <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=498689" target="_blank">詳全文</a></p>
-                      </div>
-
-                    </div><!-- end widget content -->
-                  </div><!-- end widget-body -->
-                </div>
-              </div>
-            </article>
-
-            <article class="col-sm-12">
-              <div class="jarviswidget jarviswidget-color-blueLight" id="wid-id-6" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false">
-                <header>
-                  <span class="widget-icon"> <i class="fa fa-thumbs-o-up"></i> </span>
-                  <h2>受歡迎的題庫</h2>
-                </header>
-                <div>
-                  <div class="jarviswidget-editbox">
-                  </div>
-                  <div class="widget-body">
-                    <div class="ros">
-                      <div class="col-xs-6 col-sm-4 col-md-3">
-                        <div class="panel panel-primary">
-                          <img src="images/ribbon.png" class="ribbon" alt="">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">英文指考精華100題</h3>
-                            </div>
-                            <div class="panel-body no-padding text-align-left">
-                                <img src="images/eng_exam.jpg" class="img-responsive exam-cover">
-                                <div class="the-price">
-                                    <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
-                                    <span class="pull-right price"><strong>$ 20</strong></span>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3">
-                        <div class="panel panel-primary">
-                          <img src="images/ribbon.png" class="ribbon" alt="">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">國文指考精華100題</h3>
-                            </div>
-                            <div class="panel-body no-padding text-align-left">
-                                <img src="images/chinese_exam.jpg" class="img-responsive exam-cover">
-                                <div class="the-price">
-                                    <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
-                                    <span class="pull-right price"><strong>$ 20</strong></span>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">數學指考精華100題</h3>
-                            </div>
-                            <div class="panel-body no-padding text-align-left">
-                                <img src="images/math_exam.jpg" class="img-responsive exam-cover">
-                                <div class="the-price">
-                                    <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
-                                    <span class="pull-right price"><strong>$ 20</strong></span>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">國文指考精華100題</h3>
-                            </div>
-                            <div class="panel-body no-padding text-align-left">
-                                <img src="images/chinese_exam.jpg" class="img-responsive exam-cover">
-                                <div class="the-price">
-                                    <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
-                                    <span class="pull-right price"><strong>$ 20</strong></span>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">數學指考精華100題</h3>
-                            </div>
-                            <div class="panel-body no-padding text-align-left">
-                                <img src="images/math_exam.jpg" class="img-responsive exam-cover">
-                                <div class="the-price">
-                                    <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
-                                    <span class="pull-right price"><strong>$ 20</strong></span>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">英文指考精華100題</h3>
-                            </div>
-                            <div class="panel-body no-padding text-align-left">
-                                <img src="images/eng_exam.jpg" class="img-responsive exam-cover">
-                                <div class="the-price">
-                                    <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
-                                    <span class="pull-right price"><strong>$ 20</strong></span>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-6 col-sm-4 col-md-3">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                              <h3 class="panel-title">國文指考精華100題</h3>
-                            </div>
-                            <div class="panel-body no-padding text-align-left">
-                                <img src="images/chinese_exam.jpg" class="img-responsive exam-cover">
-                                <div class="the-price">
-                                    <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
-                                    <span class="pull-right price"><strong>$ 20</strong></span>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                    </div><!-- End of row -->
-                  </div><!-- end widget content -->
-                </div><!-- end widget-body -->
-              </div><!-- End of jarviswidget -->
-              <!-- Promote Button -->
-              <div id="promote-btn">
-                <button type="button" class="btn btn-primary btn-block">免費試用</button>
-              </div>
-              <!-- End Promote Button -->
-            </article>
-
-            <article class="col-sm-12">
-              <div class="jarviswidget jarviswidget-color-blueLight" id="wid-id-7" data-widget-editbutton="false" data-widget-colorbutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false">
-                <header>
-                  <span class="widget-icon"> <i class="fa fa-info"></i> </span>
-                    <h2>題目分類</h2>
-                    <ul id="widget-tab-1" class="nav nav-tabs pull-right">
-                      <li class="active"><a data-toggle="tab" href="#q1">最多人錯</a></li>
-                      <li><a data-toggle="tab" href="#q2">最近更新</a></li>
-                      <li><a data-toggle="tab" href="#q3">最多人討論</a></li>
-                    </ul>
-                </header>
-                <div>
-                  <div class="jarviswidget-editbox">
-                  </div>
-                  <div class="widget-body no-padding">
-                    <div class="tab-content padding-10">
-                      <div class="tab-pane fade in active" id="q1">
-                        最多人錯 內容
-                      </div>
-
-                      <div class="tab-pane fade" id="q2">
-                        最進更新 內容
-                      </div>
-
-                      <div class="tab-pane fade" id="q3">
-                        最多人討論 內容
-                      </div>
-
-                    </div><!-- end widget content -->
-                  </div><!-- end widget-body -->
-                </div>
-              </div>
-            </article>
+    <div id="test_info" class="container">
+      <div class="panel panel-info">
+          <div class="panel-heading">
+              <i class="fa fa-info fa-lg"></i><span class="panel-title">考情資訊</span>
+              <ul class="nav nav-tabs panel-tabs">
+                <li class="active"><a data-toggle="tab" href="#s1">最新指考訊息</a></li>
+                <li><a data-toggle="tab" href="#s2">相關指考新聞</a></li>
+              </ul>
           </div>
-        </section>
+          <div class="panel-body">
+            <div class="tab-content padding-10">
+              <div class="tab-pane fade in active" id="s1">
+                <h4>大學指考 下月1日起報名&nbsp;&nbsp;<small class="text-right">2014/04/09</small></h4>
+                <p>【聯合報╱記者陳智華／台北報導】</p>
+                <p>大學指考7月1日登場，大考中心昨天指出，5月1日起報名，今年報名費沒調漲，如集體報名考5科，報名費為1050元，中低收入戶有7折優待，低收入費免費。指考簡章已發售，可上網下載（http://www.ceec.edu.tw），報名到5月16日，6月3日寄發准考證，6月17日公佈試場分配表及考試地點查詢。...
+                  <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=507654" target="_blank">詳全文</a></p>
+                <hr />
+                <h4>指考簡章 4月1日起發售&nbsp;&nbsp;<small class="text-right">2014/03/28</small></h4>
+                <p>【聯合報╱記者陳智華／台北報導】</p>
+                <p>大考中心昨天指出，103年指考簡章4月1日起發售，到5月16日，今年考試入學分發招生校系，採計3到6科，發售方式可到大考中心網站查詢，網址為http://www.ceec.edu.tw/。
+                  <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=505758" target="_blank">詳全文</a></p>
+                <hr />
+                <h4>103學年度 指定科目考試重要日期&nbsp;&nbsp;<small class="text-right">2014/03/25</small></h4>
+                <p>【聯合報╱記者陳智華／台北報導】</p>
+                <p>【聯合新聞網／整理】項目 日期 報名  103／05／01 (四) 〜05／16(五...
+                  <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=505537" target="_blank">詳全文</a></p>
+              </div>
+              <div class="tab-pane fade" id="s2">
+                <h4>分科測驗取代指考 申請延到6、7月&nbsp;&nbsp;<small class="text-right">2014/03/15</small></h4>
+                <p>【聯合報╱記者陳智華／台北報導】</p>
+                <p>大考中心原本規畫110年指考與學測兩試合一，成為「新型學測」，但昨天公佈最新草案，又改成兩試不合一，學測成為「新型學測」，指考則轉型為「分科測驗」，「新型學測」仍在寒假考試，「分科測驗」5月考，個人申請則延到6、7月才進行，但可同時採用學測和分科測驗成績。...
+                  <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=503858" target="_blank">詳全文</a></p>
+                <hr />
+                <h4>「新型學測」廢指考 擬6月定案&nbsp;&nbsp;<small class="text-right">2014/02/12</small></h4>
+                <p>【聯合報╱記者張錦弘／台北報導】</p>
+                <p>大考中心昨天開會討論大學招考改革案，初步取得共識，未來指考將走入歷史，改推出「新型學測」，考國、英、數、自然、社會等5科，可同時用於繁星推薦、個人申請及分發。繁星招生一律採計5科，另2管道採計3到5科。...
+                  <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=498689" target="_blank">詳全文</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="panel-footer text-align-center">
+          </div> -->
       </div>
-    </div> <!-- test_info -->
+    </div>
+
+    <!-- Promote Button -->
+    <div id="promote-btn">
+      <button type="button" class="btn btn-primary btn-block">免費試用</button>
+    </div>
+    <!-- End Promote Button -->
+
+    <div id="exam_ad" class="container">
+      <div class="panel panel-info">
+          <div class="panel-heading">
+              <i class="fa fa-thumbs-o-up fa-lg"></i><span class="panel-title">受歡迎的題庫</span>
+          </div>
+          <div class="panel-body">
+            <div class="ros">
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="panel panel-primary">
+                  <img src="images/ribbon.png" class="ribbon" alt="">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">英文指考精華100題</h3>
+                    </div>
+                    <div class="panel-body no-padding text-align-left">
+                        <img src="images/eng_exam.jpg" class="img-responsive exam-cover">
+                        <div class="the-price">
+                            <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                            <span class="pull-right price"><strong>$ 20</strong></span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="panel panel-primary">
+                  <img src="images/ribbon.png" class="ribbon" alt="">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">國文指考精華100題</h3>
+                    </div>
+                    <div class="panel-body no-padding text-align-left">
+                        <img src="images/chinese_exam.jpg" class="img-responsive exam-cover">
+                        <div class="the-price">
+                            <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                            <span class="pull-right price"><strong>$ 20</strong></span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">數學指考精華100題</h3>
+                    </div>
+                    <div class="panel-body no-padding text-align-left">
+                        <img src="images/math_exam.jpg" class="img-responsive exam-cover">
+                        <div class="the-price">
+                            <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                            <span class="pull-right price"><strong>$ 20</strong></span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">國文指考精華100題</h3>
+                    </div>
+                    <div class="panel-body no-padding text-align-left">
+                        <img src="images/chinese_exam.jpg" class="img-responsive exam-cover">
+                        <div class="the-price">
+                            <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                            <span class="pull-right price"><strong>$ 20</strong></span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">數學指考精華100題</h3>
+                    </div>
+                    <div class="panel-body no-padding text-align-left">
+                        <img src="images/math_exam.jpg" class="img-responsive exam-cover">
+                        <div class="the-price">
+                            <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                            <span class="pull-right price"><strong>$ 20</strong></span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">英文指考精華100題</h3>
+                    </div>
+                    <div class="panel-body no-padding text-align-left">
+                        <img src="images/eng_exam.jpg" class="img-responsive exam-cover">
+                        <div class="the-price">
+                            <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                            <span class="pull-right price"><strong>$ 20</strong></span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-4 col-md-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">國文指考精華100題</h3>
+                    </div>
+                    <div class="panel-body no-padding text-align-left">
+                        <img src="images/chinese_exam.jpg" class="img-responsive exam-cover">
+                        <div class="the-price">
+                            <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                            <span class="pull-right price"><strong>$ 20</strong></span>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div><!-- End of row -->
+          </div>
+          <!-- <div class="panel-footer text-align-center">
+          </div> -->
+      </div>
+    </div>
+
+    <!-- Promote Button -->
+    <div id="promote-btn">
+      <button type="button" class="btn btn-primary btn-block">免費試用</button>
+    </div>
+    <!-- End Promote Button -->
+
+    <div id="question_category" class="container">
+      <div class="panel panel-info">
+          <div class="panel-heading">
+              <i class="fa fa-bars fa-lg"></i><span class="panel-title">題目分類</span>
+              <ul class="nav nav-tabs panel-tabs">
+                <li class="active"><a data-toggle="tab" href="#q1">最多人錯</a></li>
+                <li><a data-toggle="tab" href="#q2">最近更新</a></li>
+                <li><a data-toggle="tab" href="#q3">最多人討論</a></li>
+              </ul>
+          </div>
+          <div class="panel-body">
+            <div class="tab-content padding-10">
+              <div class="tab-pane fade in active" id="q1">
+                <div class="question-block">
+                  <p class="question-subject">《英文》</p>
+                  <p class="question-part"><strong>Q1.</strong>When a young child goes out and commits a crime, it is usually the parents who should be held ____……</p>
+                  <p><span class="label label-default">101年指考</span></p>
+                  <p class="text-right">此題被作答過 16 次 ． 10 次答錯
+                  <button type="button" class="btn btn-success pull-left">我要作答</button></p>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="q2">
+                <div class="question-block">
+                  <p class="question-subject">《國文》</p>
+                  <p class="question-part"><strong>Q1.</strong>閱讀下列各詩，選出敘述正確的選項： 甲、讓我把你潮濕的憂傷，一點，一滴，收藏（宇文正〈除濕機〉） 乙……</p>
+                  <p><span class="label label-default">101年指考</span></p>
+                  <p class="text-right">此題被作答過 0 次 ． 0 次答錯
+                  <button type="button" class="btn btn-success pull-left">我要作答</button></p>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="q3">
+                <div class="question-block">
+                  <p class="question-subject">《國文》</p>
+                  <p class="question-part"><strong>Q1.</strong>下列文句，依文意選出排列順序最適當的選項： 「危微之幾，惟明君子而後能知之。故人心譬如槃水， 甲、微風……</p>
+                  <p><span class="label label-default">101年指考</span></p>
+                  <p class="text-right">此題被作答過 0 次 ． 0 次答錯
+                  <button type="button" class="btn btn-success pull-left">我要作答</button></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="panel-footer text-align-center">
+          </div> -->
+      </div>
+    </div>
 
     <!--================================================== -->
     <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
@@ -291,14 +436,39 @@
     <script src="js/smartwidgets/jarvis.widget.min.js"></script>
     <!-- MAIN APP JS FILE -->
     <script src="js/app.js"></script>
+    <!-- PAGE RELATED PLUGIN(S) -->
+    <script src="js/plugin/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+    <script src="js/plugin/fuelux/wizard/wizard.js"></script>
     <!--[if IE 7]>
     <h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
     <![endif]-->
     <script>
     $(document).ready(function() {
-      
       pageSetUp();
+      $("#register-btn").on("click", function(){
+        $('#login-modal').modal('show');
+        switchToCreateAccount();
+      });
+      $("#login-btn").on("click", function(){
+        $('#login-modal').modal('show');
+        switchToLogin();
+      });
     });
+
+    function switchToCreateAccount(){
+        $('#loginLabel').text("Create Account");
+        //$('#loginFooter').html("<a href=\"javascript:switchToLogin();\">Back To Login</a>");
+        $('#loginFooter').hide();
+        $('#loginAccount').hide();
+        $('#createAccount').show();
+    }
+    function switchToLogin(){
+        $('#loginLabel').text("Sign in<");
+        $('#loginFooter').show();
+        $('#loginFooter').html("<a href=\"javascript:switchToCreateAccount();\">Create New Account</a>");
+        $('#loginAccount').show();
+        $('#createAccount').hide();
+    }
     </script>
   </body>
 </html>
