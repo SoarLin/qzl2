@@ -1,16 +1,9 @@
-.container{
-    padding: 20px 20px;
+body {
+  padding-bottom: 20px;
 }
 
-#register{
-  width: 60px;
-}
-#signin{
-  width: 60px;
-}
-
-#test_info{
-    padding-bottom: 20px;
+.navbar-login{
+    padding: 10px;
 }
 
 #promote-btn{
@@ -18,11 +11,24 @@
     position: relative;
     left: 37%;/*整個分頁向右邊移動寬度的50%*/
     text-align: center;
+    padding-bottom: 20px;
 }
 
-h1.thin {
+.panel-title{
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.exam-cover{
+    height: 150px;
+}
+.panel-body > .the-price{
+    background: none repeat scroll 0 0 #EEEEEE;
+    box-shadow: none !important;
     color: #333333;
-    font-size: 28px;
-    font-weight: 300;
-    text-align: center;
+}
+.price{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: -8px;
 }

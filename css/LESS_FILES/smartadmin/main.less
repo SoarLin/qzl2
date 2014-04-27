@@ -1,17 +1,21 @@
 html {
 	margin: 0;
 	padding: 0;
+	overflow-x: hidden !important; /*- disabled for widget chrome bug */
+	/*
 	height: 100%;
-	 overflow-x: hidden !important; /*- disabled for widget chrome bug */
 	background:url('@{base-url}/@{html-background-image}') @html-background-color;
+	*/
 }
 
 body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
 	overflow:hidden; /*- disabled for widget chrome bug */
+	/*
+	height: 100%;
 	background:url('@{base-url}/@{body-background-image}') @body-background-color;
+	*/
 	direction:ltr;
 }
 
@@ -3276,7 +3280,7 @@ img.away {
 	font-weight: bold;
 	height: 30px;
 	min-width: 30px;
-	padding: 5px;
+	padding: 2px;
 	text-align: center;
 	text-decoration: none !important;
 	-moz-user-select: none;
@@ -3290,7 +3294,7 @@ img.away {
 	background-image: linear-gradient(top,lighten(@gray-lightest, 1.9%),darken(@gray-lightest, 1%));
 	border: 1px solid @gray-mid-light;
 	color: #6D6A69;
-	font-size: 13px;
+	font-size: 17px;
 	margin: 10px 0 0 0;
 }
 
