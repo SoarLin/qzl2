@@ -1,5 +1,4 @@
 body {
-  padding-bottom: 20px;
 }
 
 .navbar-login{
@@ -12,8 +11,6 @@ body {
 
 #promote-btn{
     width: 300px;
-    position: relative;
-    left: 37%;/*整個分頁向右邊移動寬度的50%*/
     text-align: center;
     padding-bottom: 20px;
 }
@@ -27,11 +24,6 @@ body {
     float: right;
     margin-top: -5px;
 }
-/*.ribbon {
-    position: absolute;
-    right: 9px;
-    top: -4px;
-}*/
 
 .exam-cover{
     height: 150px;
@@ -58,4 +50,31 @@ body {
 .question-part{
     font-size: 16px;
     font-weight: 500;
+}
+
+#App{
+    color: #FFFFFF;
+    background-color: #555555;
+    height: 180px;
+    padding: 10px;
+}
+
+#footer {
+  background-color: #111111;
+}
+.footer-text {
+  margin: 20px 0;
+  color: #FFFFFF;
+}
+.footer-text a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.copyright{
+    color:#FFFFFF;
+    margin: 20px 0;
 }
