@@ -83,8 +83,8 @@ $(document).ready(function() {
 		$('nav ul').jarvismenu({
 			accordion : true,
 			speed : $.menu_speed,
-			closedSign : '<em class="fa fa-expand-o"></em>',
-			openedSign : '<em class="fa fa-collapse-o"></em>'
+			closedSign : '<em class="fa fa-plus-square-o"></em>',
+			openedSign : '<em class="fa fa-minus-square-o "></em>'
 		});
 	} else {
 		alert("Error - menu anchor does not exist");
@@ -98,10 +98,15 @@ $(document).ready(function() {
 	});
 
 	// HIDE MENU
-	$('#hide-menu >:first-child > a').click(function(e) {
-		$('body').toggleClass("hidden-menu");
-		e.preventDefault();
-	});
+	// $('#hide-menu >:first-child > a').click(function(e) {
+	// 	$('body').toggleClass("hidden-menu");
+	// 	e.preventDefault();
+	// });
+	// HIDE MENU(Edit by soar)
+	$('#hide-menu').click(function(e) {
+      $('body').toggleClass("hidden-menu");
+      e.preventDefault();
+  });
 	
 	$('#show-shortcut').click(function(e) {
 		if ($.shortcut_dropdown.is(":visible")) {
