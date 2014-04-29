@@ -64,7 +64,7 @@
       <!-- end user info -->
       <nav>
         <ul>
-          <li>
+          <li class="active">
             <a href="dashboard.html" title="首頁"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">首頁</span></a>
           </li>
           <li>
@@ -74,13 +74,13 @@
             <a href="questioncategory.html" title="題目分類"><i class="fa fa-lg fa-fw fa-star"></i> <span class="menu-item-parent">題目分類</span></a>
           </li>
           <li>
-            <a href="myexams.html" title="我的題庫"><i class="fa fa-lg fa-fw fa-bars"></i> <span class="menu-item-parent">我的題庫</span></a>
+            <a href="#" title="我的題庫"><i class="fa fa-lg fa-fw fa-bars"></i> <span class="menu-item-parent">我的題庫</span></a>
             <ul>
               <li>
-                <a href="#">學測</a>
+                <a href="myexams136.html">學測</a>
               </li>
               <li>
-                <a href="#">指考</a>
+                <a href="myexams135.html">指考</a>
               </li>
             </ul>
           </li>
@@ -123,7 +123,7 @@
       <!-- MAIN CONTENT -->
       <div id="content">
         <!-- 答題數、正確率、上線天數 -->
-        <div id="info" class="container">
+        <div id="info" class="padding-lr-20">
           <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-6">
               <div class="panel panel-default text-center">
@@ -171,14 +171,14 @@
         <!-- End 答題數、正確率、上線天數 -->
 
         <!-- 每日作答題數 -->
-        <div id="pratice_history" class="container">
+        <div id="pratice_history" class="padding-lr-20 hidden-xs">
           <div class="panel panel-info">
             <div class="panel-heading">
               <i class="fa fa-thumbs-o-up fa-lg"></i><span class="panel-title">練習歷程</span>
             </div>
             <div class="panel-body">
               <div class="row">
-                <div class="col-xs-12">
+                <div class="col-sm-12">
                   <canvas id="myChart" width="600" height="400"></canvas>
                 </div>
               </div>
@@ -191,7 +191,7 @@
         <!-- End 每日作答題數 -->
 
         <!-- 題庫廣告 -->
-        <div id="exam_ad" class="container">
+        <div id="exam_ad" class="padding-lr-20">
           <div class="panel panel-info">
             <div class="panel-heading">
               <i class="fa fa-thumbs-o-up fa-lg"></i><span class="panel-title">受歡迎的題庫</span>
