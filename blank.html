@@ -31,19 +31,19 @@
     <header id="header">
         <div id="logo-group">
             <!-- PLACE YOUR LOGO HERE -->
-            <span id="logo"> 考尚樂 </span>
+            <span id="logo"> <img src="images/logo.png" alt="Quizonla"> </span>
             <!-- END LOGO PLACEHOLDER -->
         </div>
         <!-- pulled right: nav area -->
         <div class="pull-right">
             <!-- collapse menu button -->
-            <button type="button" class="btn btn-info navbar-btn pull-right" id="hide-menu"><i class="fa fa-bars fa-lg"></i></button>
+            <button type="button" class="btn btn-default navbar-btn pull-right" id="hide-menu"><i class="fa fa-bars fa-lg"></i></button>
             <!-- end collapse menu -->
             <!-- logout button -->
-            <button type="button" class="btn btn-info navbar-btn transparent pull-right" id="sign-out"><i class="fa fa-sign-out fa-lg"></i></button>
+            <button type="button" class="btn btn-default navbar-btn transparent pull-right" id="sign-out"><i class="fa fa-sign-out fa-lg"></i></button>
             <!-- end logout button -->
             <!-- store button -->
-            <button class="btn btn-success navbar-btn pull-right" id="store"><i class="fa fa-shopping-cart fa-lg"></i></button>
+            <button class="btn btn-primary navbar-btn pull-right" id="store"><i class="fa fa-shopping-cart fa-lg"></i></button>
             <!-- end store button -->
         </div>
         <!-- end pulled right: nav area -->
@@ -102,63 +102,6 @@
                 <li>
                     <a href="#" title="排行榜"><i class="fa fa-lg fa-fw fa-users"></i> <span class="menu-item-parent">排行榜</span></a>
                 </li>
-                <!--
-                <li>
-                    <a href="#"><i class="fa fa-lg fa-fw fa-folder-open"></i> <span class="menu-item-parent">6 Level Navigation</span></a>
-                    <ul>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-folder-open"></i> 2nd Level</a>
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="fa fa-fw fa-folder-open"></i> 3ed Level </a>
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-fw fa-folder-open"></i> 4th Level</a>
-                                            <ul>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-fw fa-folder-open"></i> 5th Level</a>
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-folder-open"></i> Folder</a>
-
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="fa fa-fw fa-folder-open"></i> 3ed Level </a>
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-
-                        </li>
-                    </ul>
-                </li>
-                -->
                 <li>
                     <a href="#" title="行事曆"><i class="fa fa-lg fa-fw fa-calendar"><em>3</em></i> <span class="menu-item-parent">行事曆</span></a>
                 </li>
@@ -172,6 +115,52 @@
     </aside>
     <!-- END NAVIGATION -->
 
+    <!-- MAIN PANEL -->
+    <div id="main" role="main">
+
+        <!-- RIBBON -->
+        <div id="ribbon">
+
+            <span class="ribbon-button-alignment">
+              <span id="refresh" class="btn btn-ribbon" data-title="refresh"  rel="tooltip" data-placement="bottom" data-html="true">
+                <i class="fa fa-refresh"></i>
+              </span>
+            </span>
+
+            <!-- breadcrumb -->
+            <ol class="breadcrumb">
+                <li>
+                    Blank Page
+                </li>
+            </ol>
+            <!-- end breadcrumb -->
+
+            <!-- You can also add more buttons to the
+            ribbon for further usability
+
+            Example below:
+
+            <span class="ribbon-button-alignment pull-right">
+            <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+            <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+            <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+            </span> -->
+
+        </div>
+        <!-- END RIBBON -->
+
+        <!-- MAIN CONTENT -->
+        <div id="content">
+
+
+
+        </div>
+        <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END MAIN PANEL -->
+
+    <script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
     <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script>
