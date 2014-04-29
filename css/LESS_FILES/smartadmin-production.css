@@ -15572,7 +15572,8 @@ input[type="color"]:focus,
   padding-left: 0;
 }
 #content {
-  padding: 10px 14px;
+  padding-top: 10px;
+  /*padding:10px 14px;*/
   position: relative;
   left: 0px;
 }

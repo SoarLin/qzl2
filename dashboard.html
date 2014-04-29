@@ -123,45 +123,47 @@
       <!-- MAIN CONTENT -->
       <div id="content">
         <!-- 答題數、正確率、上線天數 -->
-        <div class="row">
-          <div class="col-md-3 col-sm-3 col-xs-6">
-            <div class="panel panel-default text-center">
-              <div class="panel-body">
-                <p class="font-md">已作答 <span class="font-lg text-primary">50</span> 題</p>
-                <div class="progress">
-                  <div class="progress-bar bg-color-blue" aria-valuetransitiongoal="33" style="width: 33%;" aria-valuenow="33">33%
-                    <span class="sr-only">33% Complete</span>
+        <div id="info" class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="panel panel-default text-center">
+                <div class="panel-body">
+                  <p class="font-md">已作答 <span class="font-lg text-primary">50</span> 題</p>
+                  <div class="progress">
+                    <div class="progress-bar bg-color-blue" aria-valuetransitiongoal="33" style="width: 33%;" aria-valuenow="33">33%
+                      <span class="sr-only">33% Complete</span>
+                    </div>
                   </div>
+                  <span class="font-sm">(50/150)</span>
                 </div>
-                <span class="font-sm">(50/150)</span>
               </div>
             </div>
-          </div>
-          <div class="col-md-3 col-sm-3 col-xs-6">
-            <div class="panel panel-default text-center">
-              <div class="panel-body">
-                <p class="font-md">正確率 <span class="font-lg text-primary">60</span> %</p>
-                <div class="progress">
-                  <div class="progress-bar bg-color-blue" aria-valuetransitiongoal="60" style="width: 60%;" aria-valuenow="50">60%
-                    <span class="sr-only">60% Complete</span>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="panel panel-default text-center">
+                <div class="panel-body">
+                  <p class="font-md">正確率 <span class="font-lg text-primary">60</span> %</p>
+                  <div class="progress">
+                    <div class="progress-bar bg-color-blue" aria-valuetransitiongoal="60" style="width: 60%;" aria-valuenow="50">60%
+                      <span class="sr-only">60% Complete</span>
+                    </div>
                   </div>
+                  <span class="font-sm">(30/50)</span>
                 </div>
-                <span class="font-sm">(30/50)</span>
               </div>
             </div>
-          </div>
-          <div class="col-md-3 col-sm-3 col-xs-6">
-            <div class="panel panel-default text-center">
-              <div class="panel-body">
-                <p class="font-md">已連續練習 <span class="font-lg text-primary">6</span> 天</p>
-                <p class="font-md">最高連續天數 : <span class="font-lg text-warning">10</span> 天</p>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="panel panel-default text-center">
+                <div class="panel-body">
+                  <p class="font-md">已連續練習 <span class="font-lg text-primary">6</span> 天</p>
+                  <p class="font-md">最高連續天數 : <span class="font-lg text-warning">10</span> 天</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-3 col-sm-3 col-xs-6">
-            <div class="panel panel-default text-center">
-              <div class="panel-body">
-                <p class="font-lg">距離指考剩下 <span class="font-xl text-danger">66</span> 天</p>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              <div class="panel panel-default text-center">
+                <div class="panel-body">
+                  <p class="font-lg">距離指考剩下 <span class="font-xl text-danger">66</span> 天</p>
+                </div>
               </div>
             </div>
           </div>
@@ -169,7 +171,7 @@
         <!-- End 答題數、正確率、上線天數 -->
 
         <!-- 每日作答題數 -->
-        <div id="pratice_history">
+        <div id="pratice_history" class="container">
           <div class="panel panel-info">
             <div class="panel-heading">
               <i class="fa fa-thumbs-o-up fa-lg"></i><span class="panel-title">練習歷程</span>
@@ -189,7 +191,7 @@
         <!-- End 每日作答題數 -->
 
         <!-- 題庫廣告 -->
-        <div id="exam_ad">
+        <div id="exam_ad" class="container">
           <div class="panel panel-info">
             <div class="panel-heading">
               <i class="fa fa-thumbs-o-up fa-lg"></i><span class="panel-title">受歡迎的題庫</span>
@@ -304,43 +306,49 @@
         </div>
         <!-- End 題庫廣告 -->
 
+        <!-- App宣傳 -->
+        <div id="App">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <h4>Quizon La Mobile</h4>
+              </div>
+              <div class="col-md-6 visible-md visible-lg">
+                <h4>媒體報導區塊</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End App宣傳 -->
+
+        <!-- Footer -->
+        <div id="footer">
+          <div class="container text-left">
+            <div class="row">
+              <div class="col-xs-12 col-sm12 col-md-6">
+                <p class="footer-text">
+                  <a href="#">關於我們</a>｜
+                  <a href="#">部落格</a>｜
+                  <a href="#">服務條款</a>｜
+                  <a href="#">隱私權條款</a>｜
+                  <a href="#">常見Q&A</a>｜
+                  <a href="#">聯絡我們</a>
+                </p>
+              </div>
+              <div class="col-xs-12 col-sm12 col-md-6">
+                <span class="pull-right copyright">Copyright @ 2014 Quizonla </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End footer -->
+
       </div>
       <!-- END MAIN CONTENT -->
 
     </div>
     <!-- END MAIN PANEL -->
 
-    <div id="App">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <h4>Quizon La Mobile</h4>
-          </div>
-          <div class="col-md-6 visible-md visible-lg">
-            <h4>媒體報導區塊</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="footer">
-      <div class="container text-left">
-          <div class="row">
-            <div class="col-xs-12 col-sm12 col-md-6">
-              <p class="footer-text">
-              <a href="#">關於我們</a>｜
-              <a href="#">部落格</a>｜
-              <a href="#">服務條款</a>｜
-              <a href="#">隱私權條款</a>｜
-              <a href="#">常見Q&A</a>｜
-              <a href="#">聯絡我們</a>
-              </p>
-          </div>
-          <div class="col-xs-12 col-sm12 col-md-6">
-            <span class="pull-right copyright">Copyright @ 2014 Quizonla </span>
-          </div>
-      </div>
-    </div>
     <!--================================================== -->
 
     <!--<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script> -->
@@ -358,9 +366,6 @@
         document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
       }
     </script>
-
-    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events
-    <script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
 
     <!-- BOOTSTRAP JS -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
