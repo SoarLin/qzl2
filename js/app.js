@@ -103,7 +103,7 @@ $(document).ready(function() {
 	// 	e.preventDefault();
 	// });
 	// HIDE MENU(Edit by soar)
-	$('#hide-menu').click(function(e) {
+	$('#hidden-menu').click(function(e) {
       $('body').toggleClass("hidden-menu");
       e.preventDefault();
   });
@@ -192,6 +192,10 @@ $(document).ready(function() {
 
 	// RESET WIDGETS
 	$('#refresh').click(function(e) {
+		location.reload();
+	});
+	/*
+	$('#refresh').click(function(e) {
 		$.SmartMessageBox({
 			title : "<i class='fa fa-refresh' style='color:green'></i> Clear Local Storage",
 			content : "Would you like to RESET all your saved widgets and clear LocalStorage?",
@@ -205,7 +209,7 @@ $(document).ready(function() {
 		});
 		e.preventDefault();
 	});
-
+	*/
 	// LOGOUT BUTTON
 	$('#logout a').click(function(e) {
 		//get the link

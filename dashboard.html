@@ -22,7 +22,6 @@
     <!-- Customization CSS -->
     <link rel="stylesheet" href="css/qzl-style.css">
 
-    
     <!-- GOOGLE FONT -->
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
   </head>
@@ -31,19 +30,19 @@
     <header id="header">
         <div id="logo-group">
             <!-- PLACE YOUR LOGO HERE -->
-            <span id="logo"> 考尚樂 </span>
+            <span id="logo"> <img src="images/logo.png" alt="Quizonla"> </span>
             <!-- END LOGO PLACEHOLDER -->
         </div>
         <!-- pulled right: nav area -->
         <div class="pull-right">
             <!-- collapse menu button -->
-            <button type="button" class="btn btn-info navbar-btn pull-right" id="hide-menu"><i class="fa fa-bars fa-lg"></i></button>
+            <button type="button" class="btn btn-default navbar-btn pull-right" id="hidden-menu"><i class="fa fa-bars fa-lg"></i></button>
             <!-- end collapse menu -->
             <!-- logout button -->
-            <button type="button" class="btn btn-info navbar-btn transparent pull-right" id="sign-out"><i class="fa fa-sign-out fa-lg"></i></button>
+            <button type="button" class="btn btn-default navbar-btn transparent pull-right" id="sign-out"><i class="fa fa-sign-out fa-lg"></i></button>
             <!-- end logout button -->
             <!-- store button -->
-            <button class="btn btn-success navbar-btn pull-right" id="store"><i class="fa fa-shopping-cart fa-lg"></i></button>
+            <button class="btn btn-primary navbar-btn pull-right" id="store"><i class="fa fa-shopping-cart fa-lg"></i></button>
             <!-- end store button -->
         </div>
         <!-- end pulled right: nav area -->
@@ -65,19 +64,7 @@
             </span>
         </div>
         <!-- end user info -->
-
-        <!-- NAVIGATION : This navigation is also responsive
-
-        To make this navigation dynamic please make sure to link the node
-        (the reference to the nav > ul) after page load. Or the navigation
-        will not initialize.
-        -->
         <nav>
-            <!-- NOTE: Notice the gaps after each icon usage <i></i>..
-            Please note that these links work a bit different than
-            traditional hre="" links. See documentation for details.
-            -->
-
             <ul>
                 <li>
                     <a href="dashboard.html" title="首頁"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">首頁</span></a>
@@ -102,63 +89,6 @@
                 <li>
                     <a href="#" title="排行榜"><i class="fa fa-lg fa-fw fa-users"></i> <span class="menu-item-parent">排行榜</span></a>
                 </li>
-                <!--
-                <li>
-                    <a href="#"><i class="fa fa-lg fa-fw fa-folder-open"></i> <span class="menu-item-parent">6 Level Navigation</span></a>
-                    <ul>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-folder-open"></i> 2nd Level</a>
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="fa fa-fw fa-folder-open"></i> 3ed Level </a>
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-fw fa-folder-open"></i> 4th Level</a>
-                                            <ul>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-fw fa-folder-open"></i> 5th Level</a>
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-folder-open"></i> Folder</a>
-
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="fa fa-fw fa-folder-open"></i> 3ed Level </a>
-                                    <ul>
-                                        <li>
-                                            <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><i class="fa fa-fw fa-file-text"></i> File</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-
-                        </li>
-                    </ul>
-                </li>
-                -->
                 <li>
                     <a href="#" title="行事曆"><i class="fa fa-lg fa-fw fa-calendar"><em>3</em></i> <span class="menu-item-parent">行事曆</span></a>
                 </li>
@@ -172,6 +102,250 @@
     </aside>
     <!-- END NAVIGATION -->
 
+    <!-- MAIN PANEL -->
+    <div id="main" role="main">
+
+      <!-- RIBBON -->
+      <div id="ribbon">
+
+        <span class="ribbon-button-alignment">
+          <span id="refresh" class="btn btn-ribbon" data-title="refresh"  rel="tooltip" data-placement="bottom" data-html="true">
+            <i class="fa fa-refresh"></i>
+          </span>
+        </span>
+
+        <!-- breadcrumb -->
+        <ol class="breadcrumb">
+          <li>首頁</li>
+        </ol>
+        <!-- end breadcrumb -->
+      </div>
+      <!-- END RIBBON -->
+
+      <!-- MAIN CONTENT -->
+      <div id="content">
+        <!-- 答題數、正確率、上線天數 -->
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <div class="panel panel-default text-center">
+              <div class="panel-body">
+                <p class="font-md">已作答 <span class="font-lg text-primary">50</span> 題</p>
+                <div class="progress">
+                  <div class="progress-bar bg-color-blue" aria-valuetransitiongoal="33" style="width: 33%;" aria-valuenow="33">33%
+                    <span class="sr-only">33% Complete</span>
+                  </div>
+                </div>
+                <span class="font-sm">(50/150)</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <div class="panel panel-default text-center">
+              <div class="panel-body">
+                <p class="font-md">正確率 <span class="font-lg text-primary">60</span> %</p>
+                <div class="progress">
+                  <div class="progress-bar bg-color-blue" aria-valuetransitiongoal="60" style="width: 60%;" aria-valuenow="50">60%
+                    <span class="sr-only">60% Complete</span>
+                  </div>
+                </div>
+                <span class="font-sm">(30/50)</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <div class="panel panel-default text-center">
+              <div class="panel-body">
+                <p class="font-md">已連續練習 <span class="font-lg text-primary">6</span> 天</p>
+                <p class="font-md">最高連續天數 : <span class="font-lg text-warning">10</span> 天</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-6">
+            <div class="panel panel-default text-center">
+              <div class="panel-body">
+                <p class="font-lg">距離指考剩下 <span class="font-xl text-danger">66</span> 天</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End 答題數、正確率、上線天數 -->
+
+        <!-- 每日作答題數 -->
+        <div id="pratice_history">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <i class="fa fa-thumbs-o-up fa-lg"></i><span class="panel-title">練習歷程</span>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-xs-12">
+                  <canvas id="myChart" width="600" height="400"></canvas>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="panel-footer text-align-center">
+            </div> -->
+          </div>
+        </div>
+
+        <!-- End 每日作答題數 -->
+
+        <!-- 題庫廣告 -->
+        <div id="exam_ad">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <i class="fa fa-thumbs-o-up fa-lg"></i><span class="panel-title">受歡迎的題庫</span>
+            </div>
+            <div class="panel-body">
+              <div class="ros">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <div class="panel panel-primary">
+                    <img src="images/ribbon.png" class="ribbon" alt="">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">英文指考精華100題</h3>
+                      </div>
+                      <div class="panel-body no-padding text-align-left">
+                          <img src="images/eng_exam.jpg" class="img-responsive exam-cover">
+                          <div class="the-price">
+                              <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                              <span class="pull-right price"><strong>$ 20</strong></span>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <div class="panel panel-primary">
+                    <img src="images/ribbon.png" class="ribbon" alt="">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">國文指考精華100題</h3>
+                      </div>
+                      <div class="panel-body no-padding text-align-left">
+                          <img src="images/chinese_exam.jpg" class="img-responsive exam-cover">
+                          <div class="the-price">
+                              <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                              <span class="pull-right price"><strong>$ 20</strong></span>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">數學指考精華100題</h3>
+                      </div>
+                      <div class="panel-body no-padding text-align-left">
+                          <img src="images/math_exam.jpg" class="img-responsive exam-cover">
+                          <div class="the-price">
+                              <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                              <span class="pull-right price"><strong>$ 20</strong></span>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">國文指考精華100題</h3>
+                      </div>
+                      <div class="panel-body no-padding text-align-left">
+                          <img src="images/chinese_exam.jpg" class="img-responsive exam-cover">
+                          <div class="the-price">
+                              <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                              <span class="pull-right price"><strong>$ 20</strong></span>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">數學指考精華100題</h3>
+                      </div>
+                      <div class="panel-body no-padding text-align-left">
+                          <img src="images/math_exam.jpg" class="img-responsive exam-cover">
+                          <div class="the-price">
+                              <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                              <span class="pull-right price"><strong>$ 20</strong></span>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">英文指考精華100題</h3>
+                      </div>
+                      <div class="panel-body no-padding text-align-left">
+                          <img src="images/eng_exam.jpg" class="img-responsive exam-cover">
+                          <div class="the-price">
+                              <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                              <span class="pull-right price"><strong>$ 20</strong></span>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                  <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">國文指考精華100題</h3>
+                      </div>
+                      <div class="panel-body no-padding text-align-left">
+                          <img src="images/chinese_exam.jpg" class="img-responsive exam-cover">
+                          <div class="the-price">
+                              <span><i class="fa fa-shopping-cart"></i>&nbsp;已被購買 13 次</span>
+                              <span class="pull-right price"><strong>$ 20</strong></span>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div><!-- End of row -->
+            </div>
+            <!-- <div class="panel-footer text-align-center">
+            </div> -->
+          </div>
+        </div>
+        <!-- End 題庫廣告 -->
+
+      </div>
+      <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END MAIN PANEL -->
+
+    <div id="App">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <h4>Quizon La Mobile</h4>
+          </div>
+          <div class="col-md-6 visible-md visible-lg">
+            <h4>媒體報導區塊</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container text-left">
+          <div class="row">
+            <div class="col-xs-12 col-sm12 col-md-6">
+              <p class="footer-text">
+              <a href="#">關於我們</a>｜
+              <a href="#">部落格</a>｜
+              <a href="#">服務條款</a>｜
+              <a href="#">隱私權條款</a>｜
+              <a href="#">常見Q&A</a>｜
+              <a href="#">聯絡我們</a>
+              </p>
+          </div>
+          <div class="col-xs-12 col-sm12 col-md-6">
+            <span class="pull-right copyright">Copyright @ 2014 Quizonla </span>
+          </div>
+      </div>
+    </div>
+    <!--================================================== -->
+
+    <!--<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script> -->
     <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     <script>
@@ -194,10 +368,32 @@
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- MAIN APP JS FILE -->
     <script src="js/app.js"></script>
+    <!-- Chart JS -->
+    <script src="js/Chart.min.js"></script>
+
     <script>
     $(document).ready(function() {
         pageSetUp();
+        
     });
+    var data = {
+      labels : ["January","February","March","April","May","June","July"],
+      datasets : [
+        {
+          fillColor : "rgba(220,220,220,0.5)",
+          strokeColor : "rgba(220,220,220,1)",
+          data : [65,59,90,81,56,55,40]
+        },
+        {
+          fillColor : "rgba(151,187,205,0.5)",
+          strokeColor : "rgba(151,187,205,1)",
+          data : [28,48,40,19,96,27,100]
+        }
+      ]
+    }
+    var ctx = document.getElementById("myChart").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(data);
+
     </script>
   </body>
 </html>
