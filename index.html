@@ -73,130 +73,130 @@
             <h4 id="loginLabel" class="modal-title"> Sign in </h4>
           </div>
           <div class="modal-body">
-              <div class="row" id="loginAccount">
-                <div class="col-xs-12 col-sm-6" align="center">
-                  <button type="button" class="btn btn-labeled btn-primary" id="fblogin">
-                   <span class="btn-label"><i class="fa fa-facebook fa-2x"></i></span>
-                   <span style="font-size:18px;">Login with facebook</span>
-                  </button>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="passwd" placeholder="Password">
-                  </div>
-                  <button type="submit" class="btn btn-default" id="emaillogin">Sign in</button>
-                  <a class="pull-right" href="">忘記密碼</a>
-                </div>
+            <div class="row" id="loginAccount">
+              <div class="col-xs-12 col-sm-6" align="center">
+                <button type="button" class="btn btn-labeled btn-primary" id="fblogin">
+                 <span class="btn-label"><i class="fa fa-facebook fa-2x"></i></span>
+                 <span style="font-size:18px;">Login with facebook</span>
+                </button>
               </div>
-              <div class="row" id="createAccount" style="display:none;">
-                <div class="widget-body fuelux">
-        
-                    <div class="wizard">
-                      <ul class="steps">
-                        <li data-target="#step1" class="active">
-                          <span class="badge badge-info">1</span>Step 1<span class="chevron"></span>
-                        </li>
-                        <li data-target="#step2">
-                          <span class="badge">2</span>Step 2<span class="chevron"></span>
-                        </li>
-                        <li data-target="#step3">
-                          <span class="badge">3</span>Step 3<span class="chevron"></span>
-                        </li>
-                      </ul>
-                      <div class="actions">
-                        <button type="button" class="btn btn-sm btn-primary btn-prev" disabled="disabled">
-                          <i class="fa fa-arrow-left"></i>Prev
-                        </button>
-                        <button type="button" class="btn btn-sm btn-success btn-next" data-last="Finish">
-                          Next<i class="fa fa-arrow-right"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="step-content">
-                      <form class="form-horizontal" id="fuelux-wizard" method="post">
-                        <div class="step-pane active" id="step1">
-                          <h3><strong>Step 1 </strong> - Fill Account Information</h3>
-                          <form class="form-horizontal" role="form">
-                            <div class="form-group">
-                              <label for="inputName" class="col-sm-3 control-label">UserName</label>
-                              <div class="col-sm-6">
-                                <input type="text" class="form-control" id="inputName" placeholder="UserName">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="inputEmail" class="col-sm-3 control-label">Email</label>
-                              <div class="col-sm-6">
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="inputPassword" class="col-sm-3 control-label">Password</label>
-                              <div class="col-sm-6">
-                                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="inputPasswordAgain" class="col-sm-3 control-label">Password Again</label>
-                              <div class="col-sm-6">
-                                <input type="password" class="form-control" id="inputPasswordAgain" placeholder="Password Again">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="col-sm-offset-3 col-sm-9">
-                                <div class="checkbox">
-                                  <label>
-                                    <input type="checkbox"> 我已閱讀且同意網站的 <a href="">隱私權條款</a>與<a href="">服務條款</a>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <div class="col-sm-offset-3 col-sm-9">
-                                <button type="button" class="btn btn-default btn-next" data-last="Finish">Submit</button>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="passwd" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-default" id="emaillogin">Sign in</button>
+                <a class="pull-right" href="">忘記密碼</a>
+              </div>
+            </div>
+            <div class="row" id="createAccount" style="display:none;">
+              <div class="widget-body fuelux">
 
-                        <div class="step-pane" id="step2">
-                          <h3><strong>Step 2 </strong> - Input Validation Code</h3>
-                          <form class="form-horizontal" role="form">
-                            <div class="form-group">
-                              <label for="inputCode" class="col-sm-3 control-label">Validation Code</label>
-                              <div class="col-sm-6">
-                                <input type="text" class="form-control" id="inputCode" placeholder="Validation Code">
-                              </div>
+                <div class="wizard">
+                  <ul class="steps">
+                    <li data-target="#step1" class="active">
+                      <span class="badge badge-info">1</span>Step 1<span class="chevron"></span>
+                    </li>
+                    <li data-target="#step2">
+                      <span class="badge">2</span>Step 2<span class="chevron"></span>
+                    </li>
+                    <li data-target="#step3">
+                      <span class="badge">3</span>Step 3<span class="chevron"></span>
+                    </li>
+                  </ul>
+                  <div class="actions">
+                    <button type="button" class="btn btn-sm btn-primary btn-prev" disabled="disabled">
+                      <i class="fa fa-arrow-left"></i>Prev
+                    </button>
+                    <button type="button" class="btn btn-sm btn-success btn-next" data-last="Finish">
+                      Next<i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="step-content">
+                  <form class="form-horizontal" id="fuelux-wizard" method="post">
+                    <div class="step-pane active" id="step1">
+                      <h3><strong>Step 1 </strong> - Fill Account Information</h3>
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label for="inputName" class="col-sm-3 control-label">UserName</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputName" placeholder="UserName">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail" class="col-sm-3 control-label">Email</label>
+                          <div class="col-sm-6">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputPassword" class="col-sm-3 control-label">Password</label>
+                          <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputPasswordAgain" class="col-sm-3 control-label">Password Again</label>
+                          <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPasswordAgain" placeholder="Password Again">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-offset-3 col-sm-9">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox"> 我已閱讀且同意網站的 <a href="">隱私權條款</a>與<a href="">服務條款</a>
+                              </label>
                             </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-9">
-                                  <button type="button" class="btn btn-default">Submit</button>
-                                </div>
-                              </div>
-                          </form>
+                          </div>
                         </div>
-        
-                        <div class="step-pane" id="step3">
-                          <h3><strong>Step 3 </strong> - Finished!</h3>
-                          <br>
-                          <br>
-                          <h1 class="text-center text-success"><i class="fa fa-check"></i> Congratulations!
-                          </h1>
-                          <br>
-                          <br>
-                          <br>
-                          <br>
+                        <div class="form-group">
+                          <div class="col-sm-offset-3 col-sm-9">
+                            <button type="button" class="btn btn-default btn-next" data-last="Finish">Submit</button>
+                          </div>
                         </div>
-        
                       </form>
                     </div>
-        
-                  </div>
-              </div>
+
+                    <div class="step-pane" id="step2">
+                      <h3><strong>Step 2 </strong> - Input Validation Code</h3>
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label for="inputCode" class="col-sm-3 control-label">Validation Code</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputCode" placeholder="Validation Code">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-offset-3 col-sm-9">
+                            <button type="button" class="btn btn-default">Submit</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="step-pane" id="step3">
+                      <h3><strong>Step 3 </strong> - Finished!</h3>
+                      <br>
+                      <br>
+                      <h1 class="text-center text-success"><i class="fa fa-check"></i> Congratulations!
+                      </h1>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                    </div>
+
+                  </form>
+                </div>
+
+                </div>
+            </div>
           </div>
           <div class="modal-footer" id="loginFooter">
             <a href="javascript:switchToCreateAccount();">Create New Account</a>
@@ -537,7 +537,7 @@
         $('#createAccount').show();
     }
     function switchToLogin(){
-        $('#loginLabel').text("Sign in<");
+        $('#loginLabel').text("Sign in");
         $('#loginFooter').show();
         $('#loginFooter').html("<a href=\"javascript:switchToCreateAccount();\">Create New Account</a>");
         $('#loginAccount').show();
