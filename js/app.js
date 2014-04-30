@@ -236,9 +236,14 @@ $(document).ready(function() {
 	/*
 	 * LOGOUT ACTION
 	 */
+	$('#sign-out').on('click', function(){
+		$.loginURL = $this.attr('href');
+		setTimeout(logout, 1000);
+	});
 
 	function logout() {
-		window.location = $.loginURL;
+		// window.location = $.loginURL;
+		window.location = "index.html";
 	}
 
 	/*
