@@ -108,4 +108,20 @@
   padding-left: 20px !important;
   padding-right: 20px !important;
 }
+.profile-title {
+  text-align: right;
+  width: 35%;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 3px 0;
+}
+a.editable-click {
+  color: #555555;
+  /*border-bottom: 0px;*/
+  text-decoration: none;
+  cursor: pointer;
+}
+a.editable-click:hover {
+  border-bottom: 0px;
+}
 /************ 內頁通用 End *****************/

@@ -146,7 +146,52 @@
               <div class="panel-body">
                 <div class="tab-content padding-10">
                   <div class="tab-pane fade in active" id="s1">
-                    <h4>基本資料</h4>
+                    <h4 class="padding-bottom-10">基本資料</h4>
+                    <div class="row">
+                      <div class="col-md-6 col-xm-12 col-xs-12">
+                        <table class="table table-striped">
+                          <tbody class="profile-table">
+                            <tr>
+                              <td class="profile-title">賬戶名稱</td>
+                              <td width="65%">
+                                <a id="username">John Doe</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="profile-title">電子信箱</td>
+                              <td width="65%">
+                                <a id="email">john.doe@who.are.you</a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="profile-title">出生日期</td>
+                              <td width="65%">
+                                <a id="bday">1990/05/15</a><br />
+                                <a id="birthday"></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="profile-title">性別</td>
+                              <td width="65%">
+                                <a id="gender"></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="profile-title">居住地</td>
+                              <td width="65%">
+                                <a  id="location"></a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="profile-title">就讀學校</td>
+                              <td width="65%" id="school">
+                                <button type="button" class="btn btn-xs btn-default"><i class="fa fa-plus"></i></button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                   <div class="tab-pane fade" id="s2">
                     <h4>更換照片</h4>
@@ -193,9 +238,87 @@
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- MAIN APP JS FILE -->
     <script src="js/app.js"></script>
+    <!-- X-EDITABLE -->
+    <script src="js/plugin/x-editable/moment.min.js"></script>
+    <script src="js/plugin/x-editable/x-editable.min.js"></script>
     <script>
     $(document).ready(function() {
         pageSetUp();
+        
+        // table inline edit
+        $('#username').editable({
+            mode: 'inline',
+            url: '/post',
+            type: 'text',
+            pk: 1,
+            name: 'username',
+            title: 'Enter username',
+            validate: function(value) {
+              if($.trim(value) == '') return 'This field is required';
+            } 
+        });
+
+        $('#email').editable({
+            mode: 'inline',
+            url: '/post',
+            type: 'email',
+            pk: 1,
+            name: 'email',
+            title: 'Enter email',
+            validate: function(value) {
+              if($.trim(value) == '') return 'This field is required';
+            } 
+        });
+
+        $('#bday').editable({
+            mode: 'inline',
+            type: 'combodate',
+            emptytext: "未填",
+            value: '1990-05-15',
+            format: 'YYYY-MM-DD',
+            viewformat: 'YYYY/MM/DD',
+            template: 'YYYY / MMM / D',
+            pk: 1
+        });
+        $('#birthday').editable({
+            type: "date",
+            viewformat: "yyyy/mm/dd",
+            emptytext: "未填",
+            pk: 1,
+            placement: "right",
+            datepicker: {
+                todayBtn: 'linked'
+            }
+        });
+
+        $('#gender').editable({
+            mode: "inline",
+            type: "select",
+            emptytext: "未填",
+            prepend: "",
+            source: [{
+                value: 1,
+                text: '男'
+            }, {
+                value: 2,
+                text: '女'
+            }]
+        });
+
+        $('#location').editable({
+            mode: "inline",
+            type: "select",
+            emptytext: "未選",
+            source: [
+              { value: 1, text: '台北市'}, 
+              { value: 2, text: '新北市'},
+              { value: 3, text: '宜蘭縣'},
+              { value: 4, text: '桃園縣'},
+              { value: 5, text: '桃園市'},
+              { value: 6, text: '新竹市'}
+            ]
+        });
+
     });
     </script>
   </body>
