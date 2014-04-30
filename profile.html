@@ -125,7 +125,7 @@
         <div id="exams136" class="padding-lr-20">
           <div class="panel panel-info">
               <div class="panel-heading">
-                <i class="fa fa-info fa-lg"></i><span class="panel-title">賬戶資料</span>
+                <i class="fa fa-user fa-lg"></i><span class="panel-title">賬戶資料</span>
                 <div class="clearfix"></div>
                 <ul class="nav nav-tabs panel-tabs">
                   <li class="active hidden-xs"><a data-toggle="tab" href="#s1">基本資料</a></li>
@@ -194,11 +194,56 @@
                     </div>
                   </div>
                   <div class="tab-pane fade" id="s2">
-                    <h4>更換照片</h4>
+                    <h4 class="padding-bottom-10">個人頭像</h4>
+                    <div class="row">
+                      <div class="col-md-3 col-sm-6 col-xs-12">
+                        <img src="images/big-head" alt="大頭照" class="img-rounded big-head"><br />
+                        <div class="padding-top-10">
+                          <button class="btn btn-default hidden-xs" id="updatePic" type="button">更換照片</button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <div class="tab-pane fade" id="s3">
-                    <h4>更換密碼</h4>
+                    <h4 class="padding-bottom-10">變更密碼</h4>
+                    <div class="row">
+                      <div class="col-md-6 col-xm-12 col-xs-12" style="display:none;">
+                        <form action="" method="post">
+                          <table class="table table-striped">
+                            <tbody class="profile-table">
+                              <tr>
+                                <td class="profile-title">舊密碼</td>
+                                <td width="65%">
+                                  <input type="password" name="old_password">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="profile-title">新密碼</td>
+                                <td width="65%">
+                                  <input type="password" name="password">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="profile-title">重新輸入新密碼</td>
+                                <td width="65%">
+                                  <input type="password" name="password_again">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td><button class="btn btn-default" type="button">確認送出</button></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </form>
+                      </div>
+
+                      <div class="col-md-6 col-xm-12 col-xs-12 hidden-xs">
+                        <img src="images/bg_password_fb.gif">
+                      </div>
+                      <h2 class="visible-xs"> Sorry, 不開放Facebook用戶修改密碼喔！！</h2>
+                    </div>
                   </div>
 
                 </div>
@@ -214,6 +259,29 @@
 
     </div>
     <!-- END MAIN PANEL -->
+
+<!-- 上傳試卷彈出視窗Step1 -->
+<div class="modal fade" id="uploadPic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog dialog-top">
+    <!-- Step 1. chooice file to upload -->
+    <div id="upload_file" class="modal-content">
+      <div class="modal-body" align="center">
+        <div class="panel panel-default">
+          <div class="panel-body" style="width:560px; height:480;">
+            <h2 style="margin:40px 0 60px;">將檔案拖曳至這裡...</h2>
+            <p class="font-md text-muted">上傳檔案格式：JPG、PNG、BMP與GIF格式檔案</p>
+            <p class="font-md text-muted">尺寸大於 50 x 50，容量5MB以下</p>
+            <div class="fileUpload btn btn-primary" style="margin-top:20px;">
+                <span>選取檔案上傳</span>
+                <input type="file" class="upload" />
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-success" id="uploadPicDone" type="button">下一步...</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
     <script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
     <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
@@ -244,6 +312,14 @@
     <script>
     $(document).ready(function() {
         pageSetUp();
+
+        // Update Picture
+        $('#updatePic').on('click', function(){
+          $('#uploadPic').modal('show');
+        });
+        $('#uploadPicDone').on('click', function(){
+          $('#uploadPic').modal('hide');
+        });
         
         // table inline edit
         $('#username').editable({
