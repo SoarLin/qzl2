@@ -207,66 +207,56 @@
     </header>
     <!-- END HEADER -->
 
-    <div id="test_info" class="container">
+    <div id="quick-test" class="container">
       <div class="panel panel-info">
-          <div class="panel-heading">
-              <i class="fa fa-globe fa-lg"></i><span class="panel-title">考情資訊</span>
-              <div class="clearfix"></div>
-              <ul class="nav nav-tabs panel-tabs">
-                <li class="active hidden-xs"><a data-toggle="tab" href="#s1">最新指考訊息</a></li>
-                <li class="hidden-xs"><a data-toggle="tab" href="#s2">相關指考新聞</a></li>
-                <li class="active dropdown visible-xs">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    最新指考訊息 <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a data-toggle="tab" href="#s1">最新指考訊息</a></li>
-                    <li><a data-toggle="tab" href="#s2">相關指考新聞</a></li>
-                  </ul>
-                </li>
-              </ul>
-          </div>
           <div class="panel-body">
-            <div class="tab-content padding-10">
-              <div class="tab-pane fade in active" id="s1">
-                <h4>大學指考 下月1日起報名&nbsp;&nbsp;<small class="text-right">2014/04/09</small></h4>
-                <p>【聯合報╱記者陳智華／台北報導】</p>
-                <p>大學指考7月1日登場，大考中心昨天指出，5月1日起報名，今年報名費沒調漲，如集體報名考5科，報名費為1050元，中低收入戶有7折優待，低收入費免費。指考簡章已發售，可上網下載（http://www.ceec.edu.tw），報名到5月16日，6月3日寄發准考證，6月17日公佈試場分配表及考試地點查詢。...
-                  <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=507654" target="_blank">詳全文</a></p>
-                <hr />
-                <h4>指考簡章 4月1日起發售&nbsp;&nbsp;<small class="text-right">2014/03/28</small></h4>
-                <p>【聯合報╱記者陳智華／台北報導】</p>
-                <p>大考中心昨天指出，103年指考簡章4月1日起發售，到5月16日，今年考試入學分發招生校系，採計3到6科，發售方式可到大考中心網站查詢，網址為http://www.ceec.edu.tw/。
-                  <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=505758" target="_blank">詳全文</a></p>
-                <hr />
-                <h4>103學年度 指定科目考試重要日期&nbsp;&nbsp;<small class="text-right">2014/03/25</small></h4>
-                <p>【聯合報╱記者陳智華／台北報導】</p>
-                <p>【聯合新聞網／整理】項目 日期 報名  103／05／01 (四) 〜05／16(五...
-                  <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=505537" target="_blank">詳全文</a></p>
+            <div class="row">
+              <h2>《國文》</h2>
+              <div class="col-xs-6">
+                <p><span class="font-lg">1.</span>&nbsp;<span class="font-md">(單選題)</span>
+                </p>
               </div>
-              <div class="tab-pane fade" id="s2">
-                <h4>分科測驗取代指考 申請延到6、7月&nbsp;&nbsp;<small class="text-right">2014/03/15</small></h4>
-                <p>【聯合報╱記者陳智華／台北報導】</p>
-                <p>大考中心原本規畫110年指考與學測兩試合一，成為「新型學測」，但昨天公佈最新草案，又改成兩試不合一，學測成為「新型學測」，指考則轉型為「分科測驗」，「新型學測」仍在寒假考試，「分科測驗」5月考，個人申請則延到6、7月才進行，但可同時採用學測和分科測驗成績。...
-                  <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=503858" target="_blank">詳全文</a></p>
-                <hr />
-                <h4>「新型學測」廢指考 擬6月定案&nbsp;&nbsp;<small class="text-right">2014/02/12</small></h4>
-                <p>【聯合報╱記者張錦弘／台北報導】</p>
-                <p>大考中心昨天開會討論大學招考改革案，初步取得共識，未來指考將走入歷史，改推出「新型學測」，考國、英、數、自然、社會等5科，可同時用於繁星推薦、個人申請及分發。繁星招生一律採計5科，另2管道採計3到5科。...
-                  <a href="http://mag.udn.com/mag/edu/storypage.jsp?f_ART_ID=498689" target="_blank">詳全文</a></p>
+              <div class="col-xs-6">
+                <div class="btn-group pull-right">
+                  <button type="button" class="btn btn-default btn-sm">小</button>
+                  <button type="button" class="btn btn-default btn-sm active">中</button>
+                  <button type="button" class="btn btn-default btn-sm">大</button>
+                </div>
+              </div>
+              <!-- 題目與選項區塊 -->
+              <div class="col-xs-12 smart-form">
+                <p class="font-md">下列各組「」內的字，讀音相同的選項是：</p>
+                <label class="radio font-md">
+                  <input type="radio" name="radio">
+                  <i></i>(A) 「瓠」巴鼓瑟／簞「瓢」屢空
+                </label>
+                <label class="radio font-md">
+                  <input type="radio" name="radio">
+                  <i></i>(B) 令人發「噱」／「遽」然而逝
+                </label>
+                <label class="radio font-md">
+                  <input type="radio" name="radio">
+                  <i></i>(C) 同心「戮」力／「蓼」菜成行
+                </label>
+                <label class="radio font-md">
+                  <input type="radio" name="radio">
+                  <i></i>(D) 寒「蛩」鳴秋／「煢」居荒野
+                </label>
+              </div>
+              <!-- End 題目與選項區塊 -->
+              <div class="clearfix"></div>
+              <hr />
+              <div class="col-xs-12 padding-bottom-10">
+                <span class="pull-right" style="margin-top:5px;"><strong>大學入學考試中心&nbsp;學測101年</strong></span>
+                <span class="font-md pull-right">資料來源&nbsp;&nbsp;</span>
+              </div>
+              <div class="col-sx-12" align="center">
+                <button class="btn btn-primary btn-lg" type="button" id="quick-check-ans">對答案</button>
               </div>
             </div>
-          </div>
-          <!-- <div class="panel-footer text-align-center">
-          </div> -->
+          </div><!-- End panel-body -->
       </div>
     </div>
-
-    <!-- Promote Button -->
-    <div id="promote-btn" class="container" align="center">
-      <button type="button" class="btn btn-primary btn-block">免費試用</button>
-    </div>
-    <!-- End Promote Button -->
 
     <div id="exam_ad" class="container">
       <div class="panel panel-info">
@@ -415,68 +405,6 @@
                 </div>
               </div>
             </div><!-- End of row -->
-          </div>
-          <!-- <div class="panel-footer text-align-center">
-          </div> -->
-      </div>
-    </div>
-
-    <!-- Promote Button -->
-    <div id="promote-btn" class="container" align="center">
-      <button type="button" class="btn btn-primary btn-block">免費試用</button>
-    </div>
-    <!-- End Promote Button -->
-
-    <div id="question_category" class="container">
-      <div class="panel panel-info">
-          <div class="panel-heading">
-              <i class="fa fa-star fa-lg"></i><span class="panel-title">題目分類</span>
-              <div class="clearfix"></div>
-              <ul class="nav nav-tabs panel-tabs">
-                <li class="active hidden-xs"><a data-toggle="tab" href="#q1">最多人錯</a></li>
-                <li class="hidden-xs"><a data-toggle="tab" href="#q2">最近更新</a></li>
-                <li class="hidden-xs"><a data-toggle="tab" href="#q3">最多人討論</a></li>
-                <li class="active dropdown visible-xs">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    最多人錯 <span class="caret"></span>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><a data-toggle="tab" href="#q1">最多人錯</a></li>
-                    <li><a data-toggle="tab" href="#q2">最近更新</a></li>
-                    <li><a data-toggle="tab" href="#q3">最多人討論</a></li>
-                  </ul>
-                </li>
-              </ul>
-          </div>
-          <div class="panel-body">
-            <div class="tab-content padding-10">
-              <div class="tab-pane fade in active" id="q1">
-                <div class="question-block">
-                  <p class="question-subject">《英文》</p>
-                  <p class="question-part"><strong>Q1.</strong>When a young child goes out and commits a crime, it is usually the parents who should be held ____……</p>
-                  <h6><span class="label label-default">101年指考</span>&nbsp;&nbsp;<small>此題被作答過 16 次 ． 10 次答錯</small></h6>
-                  <p><button type="button" class="btn btn-success" id="quick-test">我要作答</button></p>
-                </div>
-              </div>
-
-              <div class="tab-pane fade" id="q2">
-                <div class="question-block">
-                  <p class="question-subject">《國文》</p>
-                  <p class="question-part"><strong>Q1.</strong>閱讀下列各詩，選出敘述正確的選項： 甲、讓我把你潮濕的憂傷，一點，一滴，收藏（宇文正〈除濕機〉） 乙……</p>
-                  <h6><span class="label label-default">101年指考</span>&nbsp;&nbsp;<small>此題被作答過 1 次 ． 0 次答錯</small></h6>
-                  <p><button type="button" class="btn btn-success">我要作答</button></p>
-                </div>
-              </div>
-
-              <div class="tab-pane fade" id="q3">
-                <div class="question-block">
-                  <p class="question-subject">《國文》</p>
-                  <p class="question-part"><strong>Q1.</strong>下列文句，依文意選出排列順序最適當的選項： 「危微之幾，惟明君子而後能知之。故人心譬如槃水， 甲、微風……</p>
-                  <h6><span class="label label-default">101年指考</span>&nbsp;&nbsp;<small>此題被作答過 0 次 ． 0 次答錯</small></h6>
-                  <p><button type="button" class="btn btn-success">我要作答</button></p>
-                </div>
-              </div>
-            </div>
           </div>
           <!-- <div class="panel-footer text-align-center">
           </div> -->

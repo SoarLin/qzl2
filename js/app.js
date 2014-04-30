@@ -285,6 +285,11 @@ $(document).ready(function() {
 		$.root_.addClass('shortcut-on');
 	}
 
+	// QUICK TEST, edit by soar,2014/04/30
+	$('#quick-test').on('click', function(){
+		location.href="quicktest.html";
+	});
+
 });
 
 /*
