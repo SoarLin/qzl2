@@ -71,6 +71,16 @@
     margin-top: -8px;
 }
 
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    > span:hover:before,
+    > span:hover ~ span:before {
+        content: "\2605";
+        position: absolute;
+    }
+}
+
 .question-block{
     padding: 8px;
     border-bottom:1px solid #8f8f8f;
