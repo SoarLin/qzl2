@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Sagacity Technology Co., Ltd.">
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+    <title> QuizonLa 考尚樂 </title>
+
+    <!-- Bootstrap CSS & Font Awesome-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <!-- SmartAdmin Style -->
+    <link rel="stylesheet" href="css/LESS_FILES/smartadmin-production.css">
+    <link rel="stylesheet" href="css/smartadmin-skins.css">
+    <!-- Customization CSS -->
+    <link rel="stylesheet" href="css/qzl-style.css">
+
+    
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+  </head>
+  <body class="">
+    <!-- HEADER -->
+    <header id="header">
+      <div id="logo-group">
+        <!-- PLACE YOUR LOGO HERE -->
+        <span id="logo" style="color:#FFF;"> <img src="images/logo.png" alt="Quizonla"> <span class="font-md">商城</span></span>
+        <!-- END LOGO PLACEHOLDER -->
+      </div>
+      <!-- pulled right: nav area -->
+      <div class="pull-right">
+        <!-- collapse menu button -->
+        <button type="button" class="btn btn-default navbar-btn pull-right" id="hidden-menu"><i class="fa fa-bars fa-lg"></i></button>
+        <!-- end collapse menu -->
+        <!-- login/logout button -->
+        <button type="button" class="btn btn-default navbar-btn transparent pull-right" id="sign-in"><i class="fa fa-sign-in fa-lg"></i><span class="margin-left-10 hidden-xs">Sign in</span></button>
+        <!-- <button type="button" class="btn btn-default navbar-btn transparent pull-right" id="sign-out"><i class="fa fa-sign-out fa-lg"></i></button> -->
+        <!-- end login/logout button -->
+        <!-- Quizon La button -->
+        <a class="btn btn-primary navbar-btn pull-right" href="index.html"><i class="fa fa-home fa-lg"></i><span class="margin-left-10 hidden-xs">回考尚樂</span></a>
+        <!-- end Quizon La button -->
+
+        <!-- multiple lang dropdown : find all flags in the image folder -->
+        <ul class="header-dropdown-list hidden-xs">
+          <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="hidden-xs"> 升大學 </span> <i class="fa fa-angle-down"></i> </a>
+            <ul class="dropdown-menu pull-right">
+              <li class="active">
+                <a href="javascript:void(0);">升大學</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">國家考試</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">專業証照</a>
+              </li>
+              <li>
+                <a href="javascript:void(0);">語言認證</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- end multiple lang -->
+      </div>
+      <!-- end pulled right: nav area -->
+    </header>
+    <!-- END HEADER -->
+
+    <!-- SIGN IN / Register Modal -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 id="loginLabel" class="modal-title"> Sign in </h4>
+          </div>
+          <div class="modal-body">
+            <div class="row" id="loginAccount">
+              <div class="col-xs-12 col-sm-6" align="center">
+                <button type="button" class="btn btn-labeled btn-primary" id="fblogin">
+                 <span class="btn-label"><i class="fa fa-facebook fa-2x"></i></span>
+                 <span style="font-size:18px;">Login with facebook</span>
+                </button>
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="passwd" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-default" id="emaillogin">Sign in</button>
+                <a class="pull-right" href="">忘記密碼</a>
+              </div>
+            </div>
+            <div class="row" id="createAccount" style="display:none;">
+              <div class="widget-body fuelux">
+
+                <div class="wizard">
+                  <ul class="steps">
+                    <li data-target="#step1" class="active">
+                      <span class="badge badge-info">1</span>Step 1<span class="chevron"></span>
+                    </li>
+                    <li data-target="#step2">
+                      <span class="badge">2</span>Step 2<span class="chevron"></span>
+                    </li>
+                    <li data-target="#step3">
+                      <span class="badge">3</span>Step 3<span class="chevron"></span>
+                    </li>
+                  </ul>
+                  <div class="actions">
+                    <button type="button" class="btn btn-sm btn-primary btn-prev" disabled="disabled">
+                      <i class="fa fa-arrow-left"></i>Prev
+                    </button>
+                    <button type="button" class="btn btn-sm btn-success btn-next" data-last="Finish">
+                      Next<i class="fa fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="step-content">
+                  <form class="form-horizontal" id="fuelux-wizard" method="post">
+                    <div class="step-pane active" id="step1">
+                      <h3><strong>Step 1 </strong> - Fill Account Information</h3>
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label for="inputName" class="col-sm-3 control-label">UserName</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputName" placeholder="UserName">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail" class="col-sm-3 control-label">Email</label>
+                          <div class="col-sm-6">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputPassword" class="col-sm-3 control-label">Password</label>
+                          <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputPasswordAgain" class="col-sm-3 control-label">Password Again</label>
+                          <div class="col-sm-6">
+                            <input type="password" class="form-control" id="inputPasswordAgain" placeholder="Password Again">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-offset-3 col-sm-9">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox"> 我已閱讀且同意網站的 <a href="">隱私權條款</a>與<a href="">服務條款</a>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-offset-3 col-sm-9">
+                            <button type="button" class="btn btn-default btn-next" data-last="Finish">Submit</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="step-pane" id="step2">
+                      <h3><strong>Step 2 </strong> - Input Validation Code</h3>
+                      <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                          <label for="inputCode" class="col-sm-3 control-label">Validation Code</label>
+                          <div class="col-sm-6">
+                            <input type="text" class="form-control" id="inputCode" placeholder="Validation Code">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-sm-offset-3 col-sm-9">
+                            <button type="button" class="btn btn-default">Submit</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <div class="step-pane" id="step3">
+                      <h3><strong>Step 3 </strong> - Finished!</h3>
+                      <br>
+                      <br>
+                      <h1 class="text-center text-success"><i class="fa fa-check"></i> Congratulations!
+                      </h1>
+                      <br>
+                      <br>
+                      <br>
+                      <br>
+                    </div>
+
+                  </form>
+                </div>
+
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer" id="loginFooter">
+            <a href="javascript:switchToCreateAccount();">Create New Account</a>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!-- END SIGN IN / Register Modal -->
+
+    <!-- Left panel : Navigation area -->
+    <!-- Note: This width of the aside area can be adjusted through LESS variables -->
+    <aside id="left-panel">
+      <!-- User info -->
+      <div class="login-info">
+        <span> <!-- User image size is adjusted inside CSS, it should stay as it -->
+          <a>
+            <img src="img/avatars/sunny.png" alt="me" class="online" />
+            <span> john.doe </span>
+          </a>
+        </span>
+      </div>
+      <!-- end user info -->
+      <nav>
+        <ul>
+          <li>
+            <a href="#" title="熱門題庫"><span class="menu-item-parent">熱門題庫</span></a>
+          </li>
+          <li>
+            <a href="#" title="最新上架"><span class="menu-item-parent">最新上架</span></a>
+          </li>
+          <li>
+            <a href="#" title="最佳付費"><span class="menu-item-parent">最佳付費</span></a>
+          </li>
+          <hr />
+          <li>
+            <a href="#" title="科目"><span class="menu-item-parent">科目</span></a>
+            <ul>
+              <li><a href="">國文</a></li>
+              <li><a href="">英文</a></li>
+              <li><a href="#">數學</a>
+                <ul>
+                  <li><a href="">數學甲</a></li>
+                  <li><a href="">數學乙</a></li>
+                </ul>
+              </li>
+              <li><a href="#">自然</a>
+                <ul>
+                  <li><a href="">化學</a></li>
+                  <li><a href="">物理</a></li>
+                  <li><a href="">生物</a></li>
+                  <li><a href="">地球科學</a></li>
+                </ul>
+              </li>
+              <li><a href="#">社會</a>
+                <ul>
+                  <li><a href="">歷史</a></li>
+                  <li><a href="">地理</a></li>
+                  <li><a href="">公民與道德</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="功能題型"><span class="menu-item-parent">功能題型</span></a>
+            <ul>
+              <li><a href="#">學測</a></li>
+              <li><a href="#">指考</a></li>
+              <li><a href="#">考古題</a></li>
+              <li><a href="#">必考題</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" title="年級"><span class="menu-item-parent">年級</span></a>
+            <ul>
+              <li><a href="#">高一</a></li>
+              <li><a href="#">高一</a></li>
+              <li><a href="#">高三</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- <span class="minifyme"> <i class="fa fa-arrow-circle-left hit"></i> </span> -->
+
+    </aside>
+    <!-- END NAVIGATION -->
+
+
+    <!-- MAIN PANEL -->
+    <div id="main" role="main">
+
+      <!-- RIBBON -->
+      <div id="ribbon">
+        <span class="ribbon-button-alignment">
+          <span id="refresh" class="btn btn-ribbon" data-title="refresh"  rel="tooltip" data-placement="bottom" data-html="true">
+            <i class="fa fa-refresh"></i>
+          </span>
+        </span>
+
+        <!-- breadcrumb -->
+        <ol class="breadcrumb">
+            <li>
+                Blank Page
+            </li>
+        </ol>
+        <!-- end breadcrumb -->
+      </div>
+      <!-- END RIBBON -->
+
+      <!-- MAIN CONTENT -->
+      <div id="content">
+
+
+
+      </div>
+      <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END MAIN PANEL -->
+
+    <script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script>
+      if (!window.jQuery) {
+        document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+      }
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+      if (!window.jQuery.ui) {
+        document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+      }
+    </script>
+
+    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events
+    <script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
+
+    <!-- BOOTSTRAP JS -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- PAGE RELATED PLUGIN(S) -->
+    <script src="js/plugin/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+    <script src="js/plugin/fuelux/wizard/wizard.js"></script>
+    <!-- MAIN APP JS FILE -->
+    <script src="js/app.js"></script>
+    <script>
+    $(document).ready(function() {
+        pageSetUp();
+        $('#sign-out').on('click', function(){
+          location.href="qzlstore.html";
+        });
+        $('#sign-in').on('click', function(){
+          $('#login-modal').modal('show');
+          switchToLogin();
+        });
+
+        $("#fblogin").on('click', function(){
+            location.href="qzlstore.html";
+        });
+        $("#emaillogin").on('click', function(){
+            location.href="qzlstore.html";
+        });
+    });
+
+    function switchToCreateAccount(){
+        $('#loginLabel').text("Create Account");
+        //$('#loginFooter').html("<a href=\"javascript:switchToLogin();\">Back To Login</a>");
+        $('#loginFooter').hide();
+        $('#loginAccount').hide();
+        $('#createAccount').show();
+    }
+    function switchToLogin(){
+        $('#loginLabel').text("Sign in");
+        $('#loginFooter').show();
+        $('#loginFooter').html("<a href=\"javascript:switchToCreateAccount();\">Create New Account</a>");
+        $('#loginAccount').show();
+        $('#createAccount').hide();
+    }
+    </script>
+  </body>
+</html>
