@@ -43,7 +43,7 @@
         <button type="button" class="btn btn-default navbar-btn transparent pull-right" id="sign-out"><i class="fa fa-sign-out fa-lg"></i></button>
         <!-- end logout button -->
         <!-- store button -->
-        <button class="btn btn-primary navbar-btn pull-right" id="store"><i class="fa fa-shopping-cart fa-lg"></i></button>
+        <button type="button" class="btn btn-primary navbar-btn pull-right" id="store"><i class="fa fa-shopping-cart fa-lg"></i></button>
         <!-- end store button -->
       </div>
       <!-- end pulled right: nav area -->
@@ -159,6 +159,10 @@
     <script>
     $(document).ready(function() {
         pageSetUp();
+
+        $('#store').on('click', function(){
+            location.href = "qzlstore.html";
+        });
     });
     </script>
   </body>
