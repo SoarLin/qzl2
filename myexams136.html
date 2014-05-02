@@ -19,6 +19,9 @@
     <!-- SmartAdmin Style -->
     <link rel="stylesheet" href="css/LESS_FILES/smartadmin-production.css">
     <link rel="stylesheet" href="css/smartadmin-skins.css">
+
+    <!-- iCheck Button CSS -->
+    <link rel="stylesheet" href="css/skins/square/_all.css">
     <!-- Customization CSS -->
     <link rel="stylesheet" href="css/qzl-style.css">
 
@@ -149,6 +152,19 @@
                 </ul>
               </div>
               <div class="panel-body">
+                <div class="row padding-10">
+                  <div class="col-xs-4 col-sm-2 form">
+                    <button type="button" class="btn btn-primary">快速出題</button>
+                  </div>
+                  <div class="col-xs-8 col-sm-3 form">
+                    <!-- <button type="button" class="btn btn-primary">快速出題</button> -->
+                    <input class="margin-left-10" type="radio" name="number" value="10" checked="checked"> 10題
+                    <input class="margin-left-10" type="radio" name="number" value="20"> 20題
+                  </div>
+                  <div class="col-xs-8 col-sm-6 form">
+                    <input class="margin-left-10" type="checkbox" name="not_done" checked="checked"> 排除已做過題目
+                  </div>
+                </div>
                 <div class="tab-content padding-10">
                   <div class="tab-pane fade in active" id="s1">
                     <h4>國文題庫標題Ａ</h4>
@@ -167,11 +183,14 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-xs-6 col-sm-3 col-md-2">
+                      <div class="col-xs-4 col-sm-3 col-md-2">
                         <button type="button" class="btn btn-default">開始練習</button>
                       </div>
-                      <div class="col-xs-6 col-sm-3 col-md-2">
+                      <div class="col-xs-4 col-sm-3 col-md-2">
                         <button type="button" class="btn btn-default">錯誤重做</button>
+                      </div>
+                      <div class="col-xs-4 col-sm-3 col-md-2">
+                        <button type="button" class="btn btn-default" disabled="disabled">隨機練習</button>
                       </div>
                     </div>
                     <hr />
@@ -195,11 +214,17 @@
                         <button type="button" class="btn btn-default">開始練習</button>
                       </div>
                       <div class="col-xs-6 col-sm-3 col-md-2">
-                        <button type="button" class="btn btn-default">錯誤重做</button>
+                        <button type="button" class="btn btn-default" disabled="disabled">錯誤重做</button>
+                      </div>
+                      <div class="col-xs-4 col-sm-3 col-md-2">
+                        <button type="button" class="btn btn-default" disabled="disabled">隨機練習</button>
                       </div>
                     </div>
                     <hr />
                     <!-- 分頁部分 -->
+                    <div class="pull-right" style="margin-top:18px;">
+                      <a class="font-md text-right" href="">前往商城選購>>></a>
+                    </div>
                     <ul class="pagination">
                       <li><a href="#">&laquo;</a></li>
                       <li><a href="#">1</a></li>
@@ -284,8 +309,17 @@
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <!-- MAIN APP JS FILE -->
     <script src="js/app.js"></script>
+    <!-- iCheck Button JS -->
+    <script type="text/javascript" src="js/icheck.min.js"></script>
     <script>
     $(document).ready(function() {
+        //選擇題類型的radio, checkbox樣式
+        $('.form input').iCheck({
+          checkboxClass: 'icheckbox_square-blue',
+          radioClass: 'iradio_square-blue',
+          increaseArea: '20%' // optional
+        });
+
         pageSetUp();
     });
     </script>
