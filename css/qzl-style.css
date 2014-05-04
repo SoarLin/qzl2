@@ -172,4 +172,11 @@ a.editable-click:hover {
   bottom: 50px;
   cursor: pointer;
 }
+.ec-clause {
+  height: 400px;
+  overflow: visible;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overflow: -moz-scrollbars-vertical !important;
+}
 /************ 內頁通用 End *****************/
