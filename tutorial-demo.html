@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Sagacity Technology Co., Ltd.">
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+    <title> QuizonLa 考尚樂 </title>
+
+    <!-- Bootstrap CSS & Font Awesome-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <!-- SmartAdmin Style -->
+    <link rel="stylesheet" href="css/LESS_FILES/smartadmin-production.css">
+    <link rel="stylesheet" href="css/smartadmin-skins.css">
+
+    <!-- iCheck Button CSS -->
+    <link rel="stylesheet" href="css/skins/square/_all.css">
+    <!-- Customization CSS -->
+    <link rel="stylesheet" href="css/qzl-style.css">
+
+    
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+  </head>
+  <body class="">
+    <!-- HEADER -->
+    <header id="header">
+      <div id="logo-group">
+        <!-- PLACE YOUR LOGO HERE -->
+        <span id="logo"> <img src="images/logo.png" alt="Quizonla"> </span>
+        <!-- END LOGO PLACEHOLDER -->
+      </div>
+      <!-- pulled right: nav area -->
+      <div class="pull-right">
+        <!-- collapse menu button -->
+        <button type="button" class="btn btn-default navbar-btn pull-right" id="hidden-menu"><i class="fa fa-bars fa-lg"></i></button>
+        <!-- end collapse menu -->
+        <!-- logout button -->
+        <button type="button" class="btn btn-default navbar-btn transparent pull-right" id="sign-out"><i class="fa fa-sign-out fa-lg"></i></button>
+        <!-- end logout button -->
+        <!-- store button -->
+        <button type="button" class="btn btn-primary navbar-btn pull-right" id="store"><i class="fa fa-shopping-cart fa-lg"></i></button>
+        <!-- end store button -->
+      </div>
+      <!-- end pulled right: nav area -->
+    </header>
+    <!-- END HEADER -->
+
+
+    <!-- MAIN PANEL -->
+    <div id="main-full" role="main">
+
+      <!-- RIBBON -->
+      <div id="ribbon" class="padding-top-10">
+        <label class="text-muted"> 題目ID : <input type="text" name="question_id" size="5"></label>
+        <button type="button" class="btn btn-default btn-xs"> 確認 </button>
+      </div>
+      <!-- END RIBBON -->
+
+      <!-- MAIN CONTENT -->
+      <div id="content" class="container">
+        <div class="row">
+          <div class="col-sm-9 col-xs-12">
+            <div class="panel panel-warning">
+              <div class="panel-heading">
+                <span class="font-lg margin-right-10">手寫板</span>
+                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-mail-reply fa-lg"></i></button>
+                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-mail-forward fa-lg"></i></button>
+                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-pencil fa-lg"></i></button>
+                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-eraser fa-lg"></i></button>
+                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-keyboard-o fa-lg"></i></button>
+                <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash-o fa-lg"></i></button>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div id="ans_options" class="padding-lr-20">
+                    <!-- 題目與選項區塊 -->
+                    <div class="col-xs-12">
+                      <p class="font-md">下列各組「」內的字，讀音相同的選項是：</p>
+                      <label class="font-md">
+                        <input type="radio" name="radio">&nbsp;&nbsp;(A) 「瓠」巴鼓瑟／簞「瓢」屢空
+                      </label><br />
+                      <label class="font-md">
+                        <input type="radio" name="radio">&nbsp;&nbsp;(B) 令人發「噱」／「遽」然而逝
+                      </label><br />
+                      <label class="font-md">
+                        <input type="radio" name="radio">&nbsp;&nbsp;(C) 同心「戮」力／「蓼」菜成行
+                      </label><br />
+                      <label class="font-md">
+                        <input type="radio" name="radio">&nbsp;&nbsp;(D) 寒「蛩」鳴秋／「煢」居荒野
+                      </label><br />
+                    </div>
+                    <!-- End 題目與選項區塊 -->
+                    <div class="clearfix padding-bottom-10"></div>
+                    <hr />
+                    <div class="col-xs-12 padding-bottom-10">
+                      <span class="pull-right" style="margin-top:5px;"><strong>大學入學考試中心&nbsp;學測101年</strong></span>
+                      <span class="font-md pull-right">資料來源&nbsp;&nbsp;</span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div><!-- End panel-body -->
+            </div>
+          </div>
+          <div class="col-sm-3 hidden-xs">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="pull-right">
+                  <button type="button" class="btn btn-default"><i class="fa fa-angle-up"></i></button>
+                </div>
+                <div class="clearfix"></div>
+                <div id="webcam" sytle="position:relative;">
+                  <div id="big-cam">
+                    <img src="" width="240" height="180">
+                  </div>
+                  <div id="small-cam" style="position:absolute; bottom:70px; right:24px;">
+                    <img src="" width="80" height="60">
+                  </div>
+                </div>
+                <button type="button" class="btn btn-default" style="padding:4px 7px;"><i class="fa fa-phone fa-2x text-success"></i></button>
+                  <button type="button" class="btn btn-default" style="padding:0">
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-phone fa-stack-1x"></i>
+                      <i class="fa fa-ban fa-stack-2x text-danger"></i>
+                    </span>
+                  </button>
+              </div><!-- End panel-body -->
+            </div>
+          </div>
+          <div class="col-sm-3 hidden-xs">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="pull-right">
+                  <button type="button" class="btn btn-default"><i class="fa fa-expand"></i></button>
+                  <div id="chat-room" style="height:300px;overflow:visible;overflow-x:hidden;overflow-y:scroll;overflow:-moz-scrollbars-vertical !important;">
+                    <p><img src="http://graph.facebook.com/hans44/picture" width="32" height="32"><span class="text-left">你好！你好！你好！你好！你好！你好！你好！你好！</span>
+                    </p>
+                    <p><img src="http://graph.facebook.com/bryanyuan2/picture" width="32" height="32"><span class="text-left">哈樓！哈樓！哈樓！哈樓！哈樓！哈樓！哈樓！哈樓！</span>
+                    </p>
+                    <p><img src="http://graph.facebook.com/bryanyuan2/picture" width="32" height="32"><span class="text-left">挖哈哈！挖哈哈！挖哈哈！挖哈哈！挖哈哈！挖哈哈！</span>
+                    </p>
+                  </div>
+                  <textarea col="10" row="2"></textarea>
+                  <button type="button" class="btn btn-default btn-xs">傳送</button>
+                </div>
+              </div><!-- End panel-body -->
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END MAIN PANEL -->
+
+    <!-- Footer -->
+    <div id="footer" style="height: 60px;">
+      <div class="row padding-lr-20">
+        <div class="col-xs-12 col-sm12 col-md-6">
+          <p class="footer-text">
+            <a href="#">關於我們</a>｜
+            <a href="#">部落格</a>｜
+            <a href="#">服務條款</a>｜
+            <a href="#">隱私權條款</a>｜
+            <a href="#">常見Q&A</a>｜
+            <a href="#">聯絡我們</a>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm12 col-md-6">
+          <span class="pull-right copyright">Copyright @ 2014 Quizonla </span>
+        </div>
+      </div>
+    </div>
+    <!-- End footer -->
+
+    <script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script>
+      if (!window.jQuery) {
+        document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+      }
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+      if (!window.jQuery.ui) {
+        document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+      }
+    </script>
+
+    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events
+    <script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
+
+    <!-- BOOTSTRAP JS -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- MAIN APP JS FILE -->
+    <script src="js/app.js"></script>
+    <script>
+    $(document).ready(function() {
+        pageSetUp();
+
+        $('#store').on('click', function(){
+            location.href = "qzlstore.html";
+        });
+    });
+    </script>
+  </body>
+</html>
