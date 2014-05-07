@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Sagacity Technology Co., Ltd.">
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+    <title> QuizonLa 考尚樂 </title>
+
+    <!-- Bootstrap CSS & Font Awesome-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+    <!-- SmartAdmin Style -->
+    <link rel="stylesheet" href="css/LESS_FILES/smartadmin-production.css">
+    <link rel="stylesheet" href="css/smartadmin-skins.css">
+    <!-- Customization CSS -->
+    <link rel="stylesheet" href="css/qzl-style.css">
+
+
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+  </head>
+  <body class="">
+    <!-- HEADER -->
+    <header id="header">
+      <div id="logo-group">
+        <!-- PLACE YOUR LOGO HERE -->
+        <span id="logo"> <img src="images/logo.png" alt="Quizonla"> </span>
+        <!-- END LOGO PLACEHOLDER -->
+      </div>
+      <!-- pulled right: nav area -->
+      <div class="pull-right">
+        <!-- collapse menu button -->
+        <button type="button" class="btn btn-default navbar-btn pull-right" id="hidden-menu"><i class="fa fa-bars fa-lg"></i></button>
+        <!-- end collapse menu -->
+        <!-- logout button -->
+        <button type="button" class="btn btn-default navbar-btn transparent pull-right" id="sign-out"><i class="fa fa-sign-out fa-lg"></i></button>
+        <!-- end logout button -->
+        <!-- store button -->
+        <button type="button" class="btn btn-primary navbar-btn pull-right" id="store"><i class="fa fa-shopping-cart fa-lg"></i></button>
+        <!-- end store button -->
+      </div>
+      <!-- end pulled right: nav area -->
+    </header>
+    <!-- END HEADER -->
+
+    <!-- Left panel : Navigation area -->
+    <!-- Note: This width of the aside area can be adjusted through LESS variables -->
+    <aside id="left-panel">
+      <!-- User info -->
+      <div class="login-info">
+        <span> <!-- User image size is adjusted inside CSS, it should stay as it -->
+          <a>
+            <img src="img/avatars/sunny.png" alt="me" class="online" />
+            <span> john.doe </span>
+          </a>
+        </span>
+      </div>
+      <!-- end user info -->
+      <nav>
+        <ul>
+          <li>
+            <a href="dashboard.html" title="首頁"><i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">首頁</span></a>
+          </li>
+          <li>
+            <a href="testinfo.html" title="考情資訊"><i class="fa fa-lg fa-fw fa-globe"></i> <span class="menu-item-parent">考情資訊</span></a>
+          </li>
+          <li>
+            <a href="questioncategory.html" title="題目分類"><i class="fa fa-lg fa-fw fa-star"></i> <span class="menu-item-parent">題目分類</span></a>
+          </li>
+          <li>
+            <a href="#" title="我的題庫"><i class="fa fa-lg fa-fw fa-bars"></i> <span class="menu-item-parent">我的題庫</span></a>
+            <ul>
+              <li>
+                <a href="myexams136.html">學測</a>
+              </li>
+              <li>
+                <a href="myexams135.html">指考</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="ranking.html" title="排行榜"><i class="fa fa-lg fa-fw fa-users"></i> <span class="menu-item-parent">排行榜</span></a>
+          </li>
+          <li>
+            <a href="calendar.html" title="行事曆"><i class="fa fa-lg fa-fw fa-calendar"><em>3</em></i> <span class="menu-item-parent">行事曆</span></a>
+          </li>
+          <li>
+            <a href="profile.html" title="個人資料"><i class="fa fa-lg fa-fw fa-user"></i> <span class="menu-item-parent">個人資料</span></a>
+          </li>
+        </ul>
+      </nav>
+      <span class="minifyme"> <i class="fa fa-arrow-circle-left hit"></i> </span>
+
+    </aside>
+    <!-- END NAVIGATION -->
+
+    <!-- MAIN PANEL -->
+    <div id="main" role="main">
+
+      <!-- RIBBON -->
+      <div id="ribbon">
+        <span class="ribbon-button-alignment">
+          <span id="refresh" class="btn btn-ribbon" data-title="refresh"  rel="tooltip" data-placement="bottom" data-html="true">
+            <i class="fa fa-refresh"></i>
+          </span>
+        </span>
+
+        <!-- breadcrumb -->
+        <ol class="breadcrumb">
+            <li>
+                Blank Page
+            </li>
+        </ol>
+        <!-- end breadcrumb -->
+      </div>
+      <!-- END RIBBON -->
+
+      <!-- MAIN CONTENT -->
+      <div id="content">
+        <button type="button" class="btn btn-default" id="Capture">html2canvas</button><br/>
+        <button type="button" class="btn btn-default" id="Capture2">drawWindow</button><br/>
+        <div id="empty-content"></div>
+        <canvas id="canvas" width="600" height="400"></canvas>
+
+      </div>
+      <!-- END MAIN CONTENT -->
+
+    </div>
+    <!-- END MAIN PANEL -->
+
+    <script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script>
+      if (!window.jQuery) {
+        document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+      }
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+      if (!window.jQuery.ui) {
+        document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+      }
+    </script>
+
+    <!-- JS TOUCH : include this plugin for mobile drag / drop touch events
+    <script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
+
+    <!-- BOOTSTRAP JS -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- MAIN APP JS FILE -->
+    <script src="js/app.js"></script>
+
+    <script src="js/html2canvas.js"></script>
+    <script src="js/drawWindow.js"></script>
+    <script>
+    $(document).ready(function() {
+        pageSetUp();
+
+        $('#store').on('click', function(){
+            location.href = "qzlstore.html";
+        });
+
+
+        $('#Capture').on('click',function(){
+            html2canvas($('#left-panel'), {
+              onrendered: function(canvas) {
+                $('#empty-content')[0].appendChild(canvas);
+              }
+            });
+        });
+        $('#Capture2').on('click',function(){
+            window.drawWindow(document, function(canvas) {
+              $('#empty-content')[0].appendChild(canvas);
+              //window.open(canvas.toDataURL("image/png"));
+            });
+            return false;
+        });
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+    });
+    </script>
+  </body>
+</html>
